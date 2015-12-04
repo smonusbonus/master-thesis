@@ -1,0 +1,126 @@
+\documentclass[a4paper,12pt]{booksfsf}
+%\documentclass[a4paper,12pt,twoside,fleqn]{booksfsf}
+
+\usepackage{hyperref}
+\usepackage{latexsym}
+
+\usepackage[table,dvipsnames]{xcolor}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{amsmath}
+\usepackage{psfrag}   
+\usepackage{cite}
+\def\citepunct{], [}
+\def\citedash{]--[}
+
+\usepackage{pdfpages}                           % To allow inclusion of the frontpage as a pdf-page
+\usepackage{caption}   
+\usepackage{captspec}
+\usepackage[printonlyused]{acronym} 
+\usepackage{makeidx} 
+\usepackage[english]{babel} 
+\makeindex  
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{amsbsy}
+\usepackage{lscape}
+\usepackage{breakurl}
+\usepackage{appendix}
+
+\usepackage{csquotes}
+
+\usepackage[labelfont = it, font = footnotesize, hangindent = 26pt, parskip = 20pt]{subfig}
+\usepackage{enumerate}
+
+\setlength{\oddsidemargin}{0.746cm}
+\setlength{\evensidemargin}{-0.1in}
+\setlength{\textwidth}{15.5cm}
+\setlength{\topmargin}{-0.45in}
+\setlength{\headheight}{0.3in}
+\setlength{\headsep}{0.35in}
+\setlength{\textheight}{24cm}
+\setlength{\footskip}{0.4in}
+
+\renewcommand{\baselinestretch}{1.20}
+\renewcommand{\captionfont}{\footnotesize\itshape}
+
+\renewcommand\sfdefault{phv}                               % use helvetica for sans serif
+\renewcommand\familydefault{\sfdefault}               %    use sans serif by default
+
+
+\begin{document}
+
+\frontmatter 
+
+\includepdf{frontpage} % Include the frontpage which is a separate pdf. Make sure the pdf exists!
+% Note: this only works with PDFlatex. If you use a different typesetter,
+% then include the frontpage afterwards, e.g. using Adobe Acrobat
+
+\pagestyle{empty}
+
+%\
+
+%\newpage
+%\cleardoublepage
+
+%\include{preface}
+
+\include{summary}
+
+\tableofcontents
+
+\include{acronyms}
+
+\mainmatter
+
+% defining rules for frames around figures
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{1pt}
+
+%\include{chap_introduction}
+
+%\include{chap_body}
+
+%\include{chap_...}
+
+%\include{chap_conclusions}
+
+\include{Chapters/introduction}
+\include{Chapters/version-control}
+\include{Chapters/methods}
+
+\include{Chapters/related-work}
+\include{Chapters/user-task-analysis}
+
+\include{Chapters/design-first-iteration}
+\include{Chapters/user-studies-first-iteration}
+\include{Chapters/focus-group}
+\include{Chapters/design-second-iteration}
+\include{Chapters/user-studies-second-iteration}
+
+\include{Chapters/final-design}
+\include{Chapters/results-conclusion}
+\include{Chapters/future-work}
+
+\cleardoublepage %to make sure that the first page number for the references is correctly listed in the TOC.
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEfull,Mybibliography}
+
+
+\noappendicestocpagenum
+\addappheadtotoc
+
+\begin{appendix}
+
+%\include{appendix_A}
+\include{appendix-a}
+\include{appendix-b}
+
+\end{appendix}
+
+
+\end{document}

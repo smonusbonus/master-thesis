@@ -1,0 +1,81 @@
+\chapter{Results and Conclusion} \label{chapter:results-conclusion}
+The research question asked in a rather general manner, whether authoring tools can benefit from version control. The thesis at hand tried to answer this question by documenting the user-centered design approach used for designing such a system. The design presented above shows that this it is indeed possible to combine version control and content authoring, but is this liaison beneficial to the tool's users? By looking at the sub-questions first it might become easier to answer the main research question later on. 
+
+% specific specific specific, it's the results part after all
+
+\section{Sub-question 1: Feature Reduction and Simplification}
+Most version control systems are quite powerful and cover a wide range of use cases. A result of that is a large number of features that come in many different varieties depending on which flag is used and in which context they are used. For example when using Git on the command line the \textit{checkout} command is used for both switching branches as well as creating new ones (using the -b flag). All of this needs to be learned and remembered, which increases the entry barrier for new users. Therefore, one of the questions raised in the beginning was whether certain features could be simplified or eliminated, while still preserving the core functionality of version control. Since the new authoring tool is based on Git, the question was actually, which features to expose to the users and in which way. 
+
+The decision which features to expose was based on the requirements and task analysis as well as the literature review. For example, the review has shown that version control users often regard the staging process as laborious and superfluous \cite{perez_de_rosso_whats_2013}. Based on this finding a simpler edit and saving workflow was designed that made staging unnecessary. Additionally, the manual tracking of files was eliminated entirely. As soon as a new content package is created inside the tool it is also tracked by the version control system. 
+
+Furthermore, the separation between local and remote repository was eliminated. Users always interact with a remote repository that is stored on Github. Although, this comes with a few disadvantages, such as reduced speed and a single point of failure, overall it simplifies the system and removes hidden dependencies, which Church et al. \cite{church_case_2014} identified as a usability problem. In general, managing repositories is no longer a responsibility of the user, since there is a fixed number of them representing the 14 different learning languages. The user can switch between them, but cannot create new ones or alter them in any way.
+
+% is there more?
+
+The Git reference consists of 53 commands, excluding the low-level features \cite{_gitref_????}. The git command line help still lists 21 "commonly used" commands. Compared to that the interface presented in this section consists of 7 main features related to the version control capabilities. Of course, comparing command line tools with a GUI is not the best way of answering this research question, but it still hints at the reduced complexity. 
+% count features of Git GUI
+
+%For example the requirements analysis has shown that it is important for users to experiment when creating new content. Therefore, a "work in progress" version is needed that can also be shared among users. %here I'm defending why I introduced a certain feature hmmm
+
+% which features were eliminated?
+% how were features simplified
+
+% concurrent editing of the same piece of content
+
+% the requirements showed that users needed to experiment and work 
+
+
+
+%The biggest insights for tackling this problem were delivered by the literature review. 
+
+
+
+% talk about no more hidden dependencies
+% use term "abstracation barrier" used by church
+\section{Sub-question 2: Improve Learnability}
+The second sub-question asked how the learnability of the system could be optimized. According to ISO/IEC 9126 \cite{_iso/iec_2001} learnability is a major contributor to a system's usability. As mentioned before, most version control systems, particularly those controlled via command line, require a lot of upfront knowledge about the different commands and  the conceptual model of the system. But, in order to make the authoring tool attractive to a non-technical audience, this complexity should be mostly hidden or exposed  only gradually to users. Therefore, a couple of measures were taken to design a system that has a high learnability. 
+
+First of all, the initial design was based on insights gained through the literature study and two major studies that investigated the usability of VCSs by Church et al. \cite{church_case_2014} and Jackson and Perez De Rosso \cite{perez_de_rosso_whats_2013}. How these studies influenced the interface design is described in Chapter \ref{chapter:design-first-iteration}. 
+
+Secondly, the iterative design process and the user tests ensured that hard to comprehend features were discovered and simplified. Only users with no prior experience in version control software were chosen for the tests (Appendix \ref{append:presession-quest-1}) so that the sessions were a realistic picture of novice users encountering the system for the first time. The outcome of the tests resulted in a couple of design decisions, such as the use of illustrative icons in the navigation bar and warning messages (i.e. for editing live content) that helped users to adopt best practices. 
+
+A third and very crucial means of improving the learnability of the system was the focus group that identified terms that were difficult to understand and suggested alternatives. This helped to design an interface which uses terms that are rooted in everyday language rather than one that is comprised of technical jargon. 
+
+Of course it is hard to tell whether the implemented version control mechanism is easier to use than one of the many GUI-clients for Git or other version control systems, since the context of use is quite different (code vs. language lessons). But there are a couple of indicators which show that the design of the system has indeed resulted in a good learnability: First of all, the task completion rates for almost all scenarios are quite high (above 60\% during 2nd study). Especially when considering that all participants encountered the system for the first time and basically had to learn it 'on the fly' while performing the tasks, without any introduction or prior tutorial. Additionally, the scores of the post-study questionnaire (Appendix \ref{appendix:pssuq}) for items 5 ("It was easy to learn to use this system" - 2.11) and 6 ("I believe I could become productive quickly using this system." 1.77) show that users are generally happy about the learnability of the system and feel confident to learn it quickly in the future.
+
+% PSSUQ showed that users think they could become efficient quickly using the tool (1.77)
+% "I liked using the interface of the system" 1.55
+% "The interface of the system was pleasant" 1.66
+
+% some of the questions raised in the beginning can only be answered in the long-term 
+
+\section{Sub-question 3: Reducing Initial Overhead}
+The third and last research question asked whether the overhead, initially introduced through a version control system, could be reduced. Most version control systems, especially those used in software development, require an additional effort from the user. The reason for this is that instead of just editing and saving files, the user has to administrate repositories, manage branches, define which files should be tracked and describe his or her edits. All this additional effort results in a delayed gratification when the project has increased in size and more and more users are collaborating. But, as is usually the case with delayed gratification, humans are not very good at ignoring small short-term rewards (simpler and faster editing) in favor of greater long-term rewards (file tracking, reversibility, easier collaboration). The challenge therefore was to design a system that reduced the entry barrier as compared to traditional version control systems and helped users to pick up best practices as fast as possible. Was this achieved and if yes how?
+
+The final design offered a couple of solutions to address these issues. First of all, version control comes "pre-installed" with the authoring tool. There is no need to setup repositories or define which files should be tracked. This work "out of the box". Second, users are free to ignore most version control features. If they choose to do so they can just keep on using the authoring tool as they would use other tools without a version control system. Using branches, entering saving descriptions (commit messages) or creating merge requests is entirely optional. Nevertheless, the system tries to teach best practices to the user. When altering public content (master branch) the user is reminded that it is advisable to create a new branch first. If edits are saved without a description, a tooltip explains that a description helps colleagues to better understand why something was changed. Through this mechanisms the user is slowly introduced into version control without the need for him or her to go through an extensive tutorial first. The completion rates (Chapter \ref{chapter:second-iteration}, Figure \ref{table:task-compl}) as well as the relatively low error rates (Chapter \ref{chapter:second-iteration}, Figure \ref{table:second-study-error-rate}), especially during the second study, have shown that it was indeed possible for most users to start using the system without any prior training. 
+
+On the other hand there is also room for improvement. The post-study questionnaire had the weakest scores for information quality (3.31), which measures how well the system is documented and how helpful error messages are to the user. This was partially due to the incomplete prototype that was  missing functionality, but nonetheless shows that some users felt there was too little help for using such a system. For those occasions a context-ware help feature could be useful. 
+
+Summing up one can say that the overhead of using version control was certainly reduced, but of course not completely eliminated. A system that is more powerful and offers more features will always be harder to learn and use than a simpler system.  
+
+% mix of enforcing best practices and offering more complex features optionally - set of minimal features to get started
+% overhead was certainly reduced but not eliminated
+
+\section{Conclusion}
+Now that we have looked at the sub-questions, let us get back to the main research question. Can authoring tools for e-learning benefit from version control? Ultimately answering this question is difficult, since users have not started using the system in a real-world environment yet. Time will tell whether content authoring really benefits from an integrated version control system. But, what has become clear, is that it is in fact possible to design a version control system that is easier to use and learn than most traditional VCSs and that integrates well with the content authoring process. The system enables users to manage and control the content creation process in ways that were simply not possible before. The authoring tool's capabilities were greatly improved while at the same time increasing the complexity of the tool only moderately. It can be concluded, that version control is indeed a valuable addition to the authoring process of e-learning content and its possible application should be investigated further. The next chapter looks at how this could be done.
+
+
+% section has shown that it is possible to integrate version control into content authoring, only long term will show whether it is really helpful
+
+% But it is helpful 
+
+% documenting the design and thought process of combining these two systems.  
+
+
+
+
+% research questions
+% main question: Can authoring tools for e-learning benefit from version control?
+%\item Which version control features are needed to make the integration useful?
+%\item How can the weak learnability of VCSs be improved in order to make the interaction more pleasing for inexperienced users? 
+%\item How can the overhead, usually introduced through a version control system, be kept to a minimum?

@@ -1,0 +1,12 @@
+\makeatletter %(I found this somewhere else)
+\long\def\@makecaption#1#2{%
+\vskip 10\p@
+%\setbox\@tempboxa\hbox{{\textsf{\textbf{#1:}}} {\sf#2}}%
+\setbox\@tempboxa\hbox{{{\textbf{#1:}}} {#2}}%
+\ifdim \wd\@tempboxa >\hsize
+%\@hangfrom{{\textsf{\textbf{#1:}}} }{\sf#2}\par
+\@hangfrom{{{\textbf{#1:}}} }{#2}\par
+\else
+\hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+\fi}
+\makeatother %(I found this somewhere else)

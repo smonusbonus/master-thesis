@@ -1,0 +1,58 @@
+\chapter{Body of the thesis}
+\label{chap:body}
+
+This chapter contains a few general hints on the writing. See \cite{Leferink12,Meijerink12} for more details.
+
+\section{Structure}
+\label{sec:structure}
+
+All chapters in between the introduction and the conclusions serve as a support for what is claimed in the conclusion. Several structures are possible, depending on the type of work. Discuss the structure of your report with your advisor before you start writing the chapters.
+
+When a chapter consists of several sections, introduce the structure of the chapter in the initial section (which could be an unnumbered section). The particular purpose of the chapter should be introduced there as well (as is done above). In case of a comprehensive chapter, end it with a summary or conclusion.
+
+\section{Figures and tables}
+\label{sec:figures}
+Use figures and/or tables only if this enhances the understanding of the reader. Refer to figures and tables using figure/table environments and labels, resulting in a combination of the chapter and figure/table number (for instance 'Figure~\ref{fig_empty}'), and indicate their purpose; otherwise the figure/table might as well be left out.  
+
+A figure can for instance be a graph, picture, or schematic drawing. Make sure that all relevant aspects of a figure are well visible, when printed on A4 paper. Preferably use vector-oriented graphics, and minimize the use of colors, unless they can be clearly distinguished when printed to black and white.
+
+Captions should be put below each figure, whereas they should be put \emph{above} tables. The captions should only describe what is depicted by a figure/table ('Measured attenuation as a function of frequency for cable lengths of 1~m, 5~m, and 10~m'), and not what should be concluded from it ('The longest cable has the largest attenuation for all frequencies.'). The latter should be put in the refering text. Always try to place the figure/table after the text in which it is refered, preferably at the top of bottom of a page, or in between paragraphs. Related figures can be combined in one figure environment using subfigures. 
+
+If a figure has been copied from a different source, clearly indicate that in the caption (and ask for permission, if required). 
+
+\begin{figure}
+%Insert your figure here. Make sure that the type of figure file (eps/pdf/...) complies with your typesetter.
+\caption{Empty figure}\label{fig_empty}
+\end{figure}
+
+\section{Equations}
+\label{sec:equation}
+Very short equations such as $I=V/R$ can be created in-line using dollar symbols; otherwise an equation environment (or related environment such as multline or align) should be used. Equations should be numbered after their last line in order to enable referencing elsewhere in the text. Equations are part of the sentences and therefore usually end with a period or comma. For example, according to Ohm's law, the current~$I$ flowing through a resistor is given by
+\begin{equation}
+I=\frac{V}{R}\,,
+\end{equation}
+where $V$ is the applied voltage, and $R$ is the resistance.
+
+See \cite{Meijerink12} for some more guidelines or formating equations.
+
+\section{Acronyms}
+\label{sec:acronyms}
+Acronyms should be introduced upon their first usage in the main body of the report. For instance once the \ac{FCC} has been introduced, it can be abbreviated to \ac{FCC}.
+
+Introducing, using and listing acronyms is facilitated using the \texttt{Acronym} package and \texttt{$\backslash$ac} command. 
+
+A common misconception is that the constituting words should be capitalized when the corresponding acronym is in capitals, but this is only the case when the abbreviated words form a name, such as the \ac{IEEE}. On the other hand, technical terms such as \ac{UWB} or \ac{OBFN} should not be capitalized, even though their acronyms (\ac{UWB} \ac{OBFN}) are. 
+
+Acronyms always have to be introduced in the main body of the report, even if they have already been introduced in the summary. Therefore it is better to use the \texttt{$\backslash$ac} command only in the main body of the report, and not in the summary.
+
+\section{Citations}
+\label{sec:citations}
+Use citations if the corresponding book, paper, or report supports a claim that you make in your text, or if it clarifies the context of the work (i.e. what related work have you or other people done). Only list references that are actually cited in the text; the bibliography is not just a list 'for further reading' (although that could be made separately), or a list of documents that you consulted during your work. 
+
+If you literally copy text fragments from a different source, explicitly indicate this using quotes and italic characters. Only copy or summarize material from different sources if this contributes to the understanding of the reader; in principle your report should be readable without consulting the references.
+
+The credibility of the claims in your text is largely influenced by the quality of your cited references: for instance papers in international peer-reviewed journals are generally more reliable than Wikipedia articles. 
+
+Also, note that many readers will tend to judge your knowledge on the context of your work based on the references that you cite. 
+
+Some examples are given in the References chapter~\cite{TEwebsite,Cox04,Meijerink05,Meijerink10,Meijerink06,Leferink12,Meijerink12}.
