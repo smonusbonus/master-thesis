@@ -1,17 +1,17 @@
 \chapter{Introduction}
-With the emergence of massive open online courses the e-learning industry has witnessed a sharp growth in recent years \cite{_e-learning_2014}. In 2012, as much as one third of all enrollments in the US were registrations for online classes \cite{allen_grade_2014}. In addition, 77\% of US companies offer advanced professional training based on e-learning to their employees \cite{vernau_corporate_2014}. But it is not just professional or academic education that has driven the growth of e-learning. More and more people are turning to online courses for pursuing personal interests as well. One area that is particularly popular in this regard is online language learning \cite{blake_current_2011} \cite{_its_2014}. 
+With the emergence of massive open online courses the e-learning industry has witnessed a sharp growth in recent years \cite{_e-learning_2014}. In 2012, as much as one third of all enrollments in the US were registrations for online classes \cite{allen_grade_2014}. In addition, 77\% of US companies offer advanced professional training based on e-learning to their employees \cite{vernau_corporate_2014}. But it is not just professional or academic education that has driven the growth of e-learning. More and more people are turning to online courses for pursuing personal interests as well. One area that is particularly popular in this regard is online language learning \cite{blake_current_2011,_its_2014}.
 % write about how many people use online language learning, how big is the market
 
 % source for "pursuing personal interests"?
 
-%This research project looks at one of these tools and how to improve it, which is used by the European market leader in online language learning, Babbel \cite{_learning_????}. 
+%This research project looks at one of these tools and how to improve it, which is used by the European market leader in online language learning, Babbel \cite{_learning_????}.
 
 The increasing popularity of online learning has also increased the demands on content creators and their tools. The systems that have been quietly powering most e-learning platforms are mostly invisible to its end-users. They are often referred to as \textit{learning management systems} or \textit{authoring systems} or \textit{tools} and have vastly simplified the creation, management and distribution of educational material. Some systems even track the learning progress and gather detailed usage statistics thereby allowing educators to optimize the learning content iteratively. But, with the complexity of learning content and number of contributors increasing quickly, these systems also run into limits. Most of these systems were not built to be used by a large number of contributors at the same time. Furthermore, most lack the ability of keeping track of changes made to learning content or to quickly revert changes. These problems together with a growing user base and increasing expectations on e-learning platforms necessitate the development of a new kind of authoring system more sophisticated than its predecessors.
 
-This thesis investigates how language learning content could be created and managed more easily by applying a proven paradigm from the realm of software development, called version control, to a \ac{CAT} used at one of the European market leaders in the space of online language learning, called Babbel. Special emphasis is put on fostering collaboration between different professionals and keeping track of an ever-changing and expanding course structure. The goal is to exploit version control's benefits and make them work for a non-technical user group. 
+This thesis investigates how language learning content could be created and managed more easily by applying a proven paradigm from the realm of software development, called version control, to a \ac{CAT} used at one of the European market leaders in the space of online language learning, called Babbel. Special emphasis is put on fostering collaboration between different professionals and keeping track of an ever-changing and expanding course structure. The goal is to exploit version control's benefits and make them work for a non-technical user group.
 
 \section{Babbel}
-Babbel is an interactive language learning service that was founded in 2007 and employs about 350 people as of Fall 2015 \cite{_babbel_????}. Babbel users can choose one of 14 different languages to learn. Each course is created uniquely for one language combination, which consists of a user's native language, called \ac{DL}, and the language he or she wants to learn, called \ac{LL}. Education experts, linguists and language teachers working for Babbel are responsible for managing and improving existing courses as well as creating new ones. All courses can be accessed on the desktop as well as on iOS and Android devices \cite{_learn_????}. A speech recognition system helps users to practice their pronunciation. The service is subscription-based and customers can choose among 1- to 12-month payment plans \cite{_prices_????}. 
+Babbel is an interactive language learning service that was founded in 2007 and employs about 350 people as of Fall 2015 \cite{_babbel_????}. Babbel users can choose one of 14 different languages to learn. Each course is created uniquely for one language combination, which consists of a user's native language, called \ac{DL}, and the language he or she wants to learn, called \ac{LL}. Education experts, linguists and language teachers working for Babbel are responsible for managing and improving existing courses as well as creating new ones. All courses can be accessed on the desktop as well as on iOS and Android devices \cite{_learn_????}. A speech recognition system helps users to practice their pronunciation. The service is subscription-based and customers can choose among 1- to 12-month payment plans \cite{_prices_????}.
 The research described in this thesis was conducted over the course of half a year at the Babbel headquarters in Berlin.
 
 \section{Motivation} % problem description
@@ -30,13 +30,13 @@ With the accelerating adoption of e-learning and rising demands in regards to th
 \section{Research Questions} % Version Control/Proposed Solution/
 The problems described above have one commonality: they are not exclusive to content authoring, but frequently occur during large software development projects as well. Most developers mitigate these problems by using a \ac{VCS}. Initially, version control adds a small overhead to the software development workflow, but this usually pays off when projects become more complex \cite{spinellis_version_2005}.
 
-Despite its obvious benefits, version control has not been widely adopted outside of the programming realm. This could be partially due to its usability issues  \cite{church_case_2014} \cite{perez_de_rosso_whats_2013}.
+Despite its obvious benefits, version control has not been widely adopted outside of the programming realm. This could be partially due to its usability issues \cite{church_case_2014,perez_de_rosso_whats_2013}.
 This thesis investigates if and how authoring tools could benefit from incorporating version control and how such a system could be made more user-friendly. The research question therefore reads as follows:
 
 \begin{center}
 % original research question from the proposal
 %\textit{What is the best way of exposing version control features to a non-technical user-group in the context of a content authoring tool?}
-% Can version control be integrated into authoring tools 
+% Can version control be integrated into authoring tools
  \textit{How can version control improve the authoring process for e-learning content?}
 \end{center}
 
@@ -47,21 +47,21 @@ The research question can be further divided into several sub-questions:
   \item Which features can be simplified or omitted while  preserving the usefulness of version control?
   %\item How can the interaction design address the diverse needs of different users?
   %\item How can a compromise be found between efficiency and learnability?
-  %\item How can the weak learnability of VCSs be improved in order to make the interaction more pleasing for inexperienced users? 
-  \item How can the learnability of VCSs be improved in order to make them more attractive to a non-technical audience? 
+  %\item How can the weak learnability of VCSs be improved in order to make the interaction more pleasing for inexperienced users?
+  \item How can the learnability of VCSs be improved in order to make them more attractive to a non-technical audience?
   \item How can the overhead, usually introduced through a version control system, be reduced?
 \end{enumerate}
 
 \section{Methodology}
-In order to answer the research question stated above this research project adopts a rather practical approach. An interface for a new content authoring tool will be designed incorporating version control. The interface will be tested with real users, the linguists at Babbel, in order to ensure its usability and to determine whether version control can enrich the process of authoring language lessons. 
+In order to answer the research question stated above this research project adopts a rather practical approach. An interface for a new content authoring tool will be designed incorporating version control. The interface will be tested with real users, the linguists at Babbel, in order to ensure its usability and to determine whether version control can enrich the process of authoring language lessons.
 
-The research project consists of two major phases: the analysis phase and the design and prototyping phase. During the first phase a literature review is conducted as well as two analyses. The literature review examines research concerned with the usability of popular version control software as well as examples where version control was applied outside of the programming realm. The subsequent analyses will be centered around the future users of the system and how it is used in the context of creating language courses. Therefore, a task analysis and a user requirements analysis are performed. These ensure that user needs and goals will be properly addressed during the following design phase. 
+The research project consists of two major phases: the analysis phase and the design and prototyping phase. During the first phase a literature review is conducted as well as two analyses. The literature review examines research concerned with the usability of popular version control software as well as examples where version control was applied outside of the programming realm. The subsequent analyses will be centered around the future users of the system and how it is used in the context of creating language courses. Therefore, a task analysis and a user requirements analysis are performed. These ensure that user needs and goals will be properly addressed during the following design phase.
 
 Based on the insights gained during the first phase a prototype is designed that incorporates the most important version control features needed for content authoring. The prototype is semi-interactive and will be tested with a handful of users during a task-based usability study. This first study is followed by a focus group meeting during which users discuss the problems they experienced. The focus group puts special emphasis on the version control terminology since finding alternatives to the technical and abstract terms used in most version control systems is one key for improving the usability. The results of the focus group as well as the first usability study are then used to design an improved version of the interface. This new design is again tested during another usability study. The findings of this last study will inform the final design of the authoring tool as well as help answer the research question described above.
 
 
 \section{Thesis Structure}
-The next two chapters, Chapter \ref{chapter:version-control} and \ref{chapter:methods}, will introduce the reader to version control software in more detail as well as the methodology used throughout the research project. 
+The next two chapters, Chapter \ref{chapter:version-control} and \ref{chapter:methods}, will introduce the reader to version control software in more detail as well as the methodology used throughout the research project.
 
 Chapter \ref{chapter:related-work} introduces the reader to related literature and relevant research in adjacent fields. This is followed by a more in-depth description of the different user groups at Babbel, their requirements and the tasks that are performed using the tool (Chapter \ref{chapter:user-research}).
 % maybe the user groups need to be further specified? first time they are mentioned in the thesis
@@ -88,7 +88,7 @@ Readers who are mostly interested in the outcome of the design phase and the res
 
 
 
-%The growth in e-learning is made possible by learning management systems (LMSs) that have automated or vastly simplified the creation of educational material. With the growing user base and increasing demands on e-learning these systems also need to become better. 
+%The growth in e-learning is made possible by learning management systems (LMSs) that have automated or vastly simplified the creation of educational material. With the growing user base and increasing demands on e-learning these systems also need to become better.
 
 
 
@@ -96,34 +96,34 @@ Readers who are mostly interested in the outcome of the design phase and the res
 
 
 
-%This thesis will look at the systems that power the growth of e-learning, almost unnoticed, by most of its users. 
-%be concerned with the systems behind many e-learning services. Depending on their purpose they are referred to as learning management systems,  or authoring systems. 
+%This thesis will look at the systems that power the growth of e-learning, almost unnoticed, by most of its users.
+%be concerned with the systems behind many e-learning services. Depending on their purpose they are referred to as learning management systems,  or authoring systems.
 
 
 
 
 
 
-%not purely professional, many people also learn out of a personal interest in a particular subject matter (citation).  
+%not purely professional, many people also learn out of a personal interest in a particular subject matter (citation).
 
 
 
 
-%This is not just done for professional reasons, but also out of personal interest (citation).   
+%This is not just done for professional reasons, but also out of personal interest (citation).
 
 
-%Subjects, that traditionally have been taught by universities only can now be studied by everyone in a self-paced manner. The surge in e-learning offerings has led to a significant reduction in time and resources needed to acquire new skills. 
+%Subjects, that traditionally have been taught by universities only can now be studied by everyone in a self-paced manner. The surge in e-learning offerings has led to a significant reduction in time and resources needed to acquire new skills.
 
 
 
-%One area where this is especially true is learning new languages. 
+%One area where this is especially true is learning new languages.
 
 
 
 % 1. paragraph: growth of e-learning in recent years
 % 2. paragraph: authoring systems
 % 3. paragraph: thesis topic
-% 4. paragraph: 
+% 4. paragraph:
 
 
 
@@ -133,19 +133,7 @@ Readers who are mostly interested in the outcome of the design phase and the res
 
 
 
-%Ever more people are drawn to self-paced learning online, including a wide variety of subjects. 
-
-
-
-
-
-
-
-
-
-
-
-%Today, more data is generated than ever before in human history \cite{gantz_digital_2012}. The total volume is expected to double about every two years from now. This will lead to a 50-fold increase in data by 2020 compared to 2010. At the same time only 1\% of this huge pool of data is analyzed. This points to a potential problem: Our tools are failing to keep up with the sheer volume of data. 
+%Ever more people are drawn to self-paced learning online, including a wide variety of subjects.
 
 
 
@@ -156,27 +144,39 @@ Readers who are mostly interested in the outcome of the design phase and the res
 
 
 
-%During the last two years more data has been generated than in the entire human history prior to that period \cite{_big_????}. Computers and the Internet in particular have made adding and storing information vastly more simple. 
 
-%This thesis will look at a very small piece of this data and how it is created and managed at a small startup in Berlin, called Babbel. 
+%Today, more data is generated than ever before in human history \cite{gantz_digital_2012}. The total volume is expected to double about every two years from now. This will lead to a 50-fold increase in data by 2020 compared to 2010. At the same time only 1\% of this huge pool of data is analyzed. This points to a potential problem: Our tools are failing to keep up with the sheer volume of data.
 
-%The data Babbel cares about is 
 
-%Data itself is meaningless. Especially 
+
+
+
+
+
+
+
+
+%During the last two years more data has been generated than in the entire human history prior to that period \cite{_big_????}. Computers and the Internet in particular have made adding and storing information vastly more simple.
+
+%This thesis will look at a very small piece of this data and how it is created and managed at a small startup in Berlin, called Babbel.
+
+%The data Babbel cares about is
+
+%Data itself is meaningless. Especially
 
 %the thesis is about language and data/computers.
 
 
-%This thesis is about two of the most important human inventions: languages and computers. 
+%This thesis is about two of the most important human inventions: languages and computers.
 
 
 %Companies, such as Google or Facebook have built empires based on this data.
 
 %The following thesis is about a very small piece of this data.
 
-%But despite this enormous shift the way data is created and managed has not changed that much. 
+%But despite this enormous shift the way data is created and managed has not changed that much.
 
-%This thesis is about a particular kind of data: language. 
+%This thesis is about a particular kind of data: language.
 
 %To write an ‘eye-catching’ opening sentence that will keep the reader’s attention focused;
 
