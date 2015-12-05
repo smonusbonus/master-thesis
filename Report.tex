@@ -1,6 +1,7 @@
 \documentclass[a4paper,12pt]{booksfsf}
 %\documentclass[a4paper,12pt,twoside,fleqn]{booksfsf}
 
+\usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{latexsym}
 
@@ -11,18 +12,18 @@
 \graphicspath{ {images/} }
 
 \usepackage{amsmath}
-\usepackage{psfrag}   
+\usepackage{psfrag}
 \usepackage{cite}
 \def\citepunct{], [}
 \def\citedash{]--[}
 
-\usepackage{pdfpages}                           % To allow inclusion of the frontpage as a pdf-page
-\usepackage{caption}   
+\usepackage{pdfpages} % To allow inclusion of the frontpage as a pdf-page
+\usepackage{caption}
 \usepackage{captspec}
-\usepackage[printonlyused]{acronym} 
-\usepackage{makeidx} 
-\usepackage[english]{babel} 
-\makeindex  
+\usepackage[printonlyused]{acronym}
+\usepackage{makeidx}
+\usepackage[english]{babel}
+\makeindex
 \usepackage{color}
 \usepackage{tabularx}
 \usepackage{amsbsy}
@@ -53,7 +54,7 @@
 
 \begin{document}
 
-\frontmatter 
+\frontmatter
 
 \includepdf{frontpage} % Include the frontpage which is a separate pdf. Make sure the pdf exists!
 % Note: this only works with PDFlatex. If you use a different typesetter,
@@ -106,10 +107,9 @@
 \include{Chapters/future-work}
 
 \cleardoublepage %to make sure that the first page number for the references is correctly listed in the TOC.
-\addcontentsline{toc}{chapter}{References}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEfull,Mybibliography}
-
 
 \noappendicestocpagenum
 \addappheadtotoc
