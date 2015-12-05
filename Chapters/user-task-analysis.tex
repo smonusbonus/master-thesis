@@ -17,12 +17,11 @@ Translators and proofreaders are responsible for localizing lessons into new lan
 
 The role of being a translator or proofreader is not permanent, but only true for the duration of a project. Someone who is proofreading during one project could be translating during the next. This is why they are regarded as one user group. A more detailed description of tasks performed by translators and proofreaders can be found in the next chapter in section \ref{sec:task-localization}.
 
-\subsection{Speakers}
-Speakers may have the most straightforward job. They have to record the individual vocabulary items of a lesson. Of all users they need to collaborate the fewest with other people. Because of that and because it is not clear whether sound recording will be a feature of the new content authoring tool, speakers will be ignored for the rest of the thesis. They are just listed here for the sake of completeness.
+% \subsection{Speakers}
+% Speakers may have the most straightforward job. They have to record the individual vocabulary items of a lesson. Of all users they need to collaborate the fewest with other people. Because of that and because it is not clear whether sound recording will be a feature of the new content authoring tool, speakers will be ignored for the rest of the thesis. They are just listed here for the sake of completeness.
 
 \subsection{Quality Assurance Professionals}
 Quality assurance is a systematic approach of finding bugs or problems within newly created content. It happens before new content is released. The check is carried out in the frontend as the end-user would use it. The CAT is only used when an error is found and needs to be corrected. A detailed account of what happens during quality assurance is given in section \ref{sec:task-qa}.
-
 
 \section{Task Analysis} \label{section:task-analysis}
 As described in Chapter \ref{chapter:methods}, a hierarchical task analysis was used to analyze the most common tasks performed within the process of authoring new language learning content. Insights were gained through interviews and observations over the course of several weeks. The task analysis in conjunction with the requirements described later on has served as a foundation for the design of the first prototype.
@@ -36,8 +35,9 @@ As described in Chapter \ref{chapter:methods}, a hierarchical task analysis was 
 % is this needed here or can it be included into later sections?
 
 \subsection{Tasks} \label{tasks}
-It is the responsibility of the didactics department to constantly create new learning content. This work can be divided into four major tasks, which can be seen in Table \ref{table:analyzed-tasks}. Three of these four major tasks were analyzed and then visualized using a diagram that shows the hierarchy and dependencies of different sub-tasks. Task 3 was not analyzed, because it is performed with a different tool and is quite separate as a task from the other ones.
-Note that task 1 and 4 are carried out by employees at Babbel, whereas task 2 and 3 are mostly performed by freelancers.
+It is the responsibility of the didactics department to constantly create new learning content. This work can be divided into three major tasks, which can be seen in Table \ref{table:analyzed-tasks}. Three of these four major tasks were analyzed and then visualized using a diagram that shows the hierarchy and dependencies of different sub-tasks. Task 3 was not analyzed, because it is performed with a different tool and is quite separate as a task from the other ones.
+
+Note that Task 1 and 3 are carried out by employees at Babbel, whereas Task 2 is mostly performed by freelancers.
 
 %The only exception to this is the voice recording workflow, because it is unclear whether the new tool will accommodate this feature in the future. Therefore voice recording was ignored for now. The three following major areas were analyzed.
 
@@ -47,11 +47,11 @@ Note that task 1 and 4 are carried out by employees at Babbel, whereas task 2 an
 \hline
 \rowcolor[HTML]{EFEFEF}
 {\bf Level} & {\bf Task Description}      \\ \hline
-0.          & Conceptualizing and creating new learning content \\ \hline
-1.         & Create new lesson           \\
-2.        & Localize new lesson         \\
-3.         & Sound recording for new lesson     \\
-4.         & Final quality assurance        \\ \hline
+0. & Conceptualizing and creating new learning content \\ \hline
+1. & Create new lesson           \\
+2. & Localize new lesson         \\
+%3. & Sound recording for new lesson     \\
+3. & Final quality assurance        \\ \hline
 \end{tabular}
 \caption{Tasks that were analyzed}
 \label{table:analyzed-tasks}
@@ -100,21 +100,21 @@ The task of localizing existing content is a joint effort of employees at Babbel
 %\subsubsection{Finalizing a Localization Decomposed}
 %Finalization means that the translator looks at the comments of the proofreader and implements the suggestions if he or she agrees with them. If not, a discussion between translator and proofreader takes place. They try to settle the issue independently first and only if no agreement can be reached a project manager at Babbel is consulted. When all issues have been resolved the work is handed back to Babbel where the work of the freelancers is evaluated once more by a final quality assurance.
 
-\subsubsection{Task 3: Image Assignment}
-% still work in progress
+% \subsubsection{Task 3: Image Assignment}
+% % still work in progress
 
 
-\subsubsection{Task 4: Sound Recording}
-Sound recording is the process of turning the different vocabulary items into speech. Only the learning language is recorded, not the translations. The recordings are done by native speakers who work as freelancers. Whenever new content is ready for recording (usually several lessons or a whole course) the speakers get informed of what exactly needs to be recorded. They can either do this at home, provided they use a high-quality microphone, or come to the Babbel offices and record in a professional studio. Either way, the tool they use, is the same. The recorded sounds end up on the media server and the sound IDs are linked to the respective items. After the speaker has finished his or her work package a full-time employee checks whether the recordings meet the quality standards and if not some sounds need to be re-recorded.
+% \subsubsection{Task 4: Sound Recording}
+% Sound recording is the process of turning the different vocabulary items into speech. Only the learning language is recorded, not the translations. The recordings are done by native speakers who work as freelancers. Whenever new content is ready for recording (usually several lessons or a whole course) the speakers get informed of what exactly needs to be recorded. They can either do this at home, provided they use a high-quality microphone, or come to the Babbel offices and record in a professional studio. Either way, the tool they use, is the same. The recorded sounds end up on the media server and the sound IDs are linked to the respective items. After the speaker has finished his or her work package a full-time employee checks whether the recordings meet the quality standards and if not some sounds need to be re-recorded.
 
-\begin{figure}[h!]
- \centering
- \includegraphics[width=9cm]{images/task-analysis/sound_recording}
- \caption{Sound Recording Process}
- \label{fig:sound-recording}
-\end{figure}
+% \begin{figure}[h!]
+%  \centering
+%  \includegraphics[width=9cm]{images/task-analysis/sound_recording}
+%  \caption{Sound Recording Process}
+%  \label{fig:sound-recording}
+% \end{figure}
 
-\subsubsection{Task 5: Quality Assurance} \label{sec:task-qa}
+\subsubsection{Task 3: Quality Assurance} \label{sec:task-qa}
 The final quality assurance happens right before new learning content is published. A Babbel employee clicks through the content in the frontend as a normal Babbel user would. This happens to check whether the content works as expected and the application does not break down at some point because a bug has been introduced. It is also the last chance of spotting spelling or grammar mistakes or checking whether the content complies with different conventions and has a consistent style.
 
 \begin{figure}[h]
@@ -123,7 +123,6 @@ The final quality assurance happens right before new learning content is publish
  \caption{Quality Assurance Process}
  \label{fig:qa-process}
 \end{figure}
-
 
 \subsection{Conclusion}
 The analysis made a few things obvious. First of all, collaborating and communicating with colleagues is a reoccurring theme throughout most tasks. Not only the content creation process is divided between different user groups, but also some tasks themselves. For example, when a lesson is localized, there are at least three different individuals working together, who also need to communicate in some way. Right now, email and Google Sheets are used extensively for that, but it is conceivable that at least some of this communication could be facilitated by the new version control system. This could possibly speed up the whole process and streamline collaboration.
@@ -247,6 +246,8 @@ QA-2 & As a QA professional I want to see what has changed within a certain cont
 % a lot of requirements are about communication and collaboration
 
 %The user requirements are broken down into four parts for the four different user groups. Table \ref{table:requirements-pm} shows the requirements for project managers, that are exclusive to them. Project managers are, speaking in programming-terms, a subclass of content editors. They both share the same responsibilities, but project managers have a few additional ones, such as guiding the content creation process and managing freelancers. The requirements of content editors can be seen in table \ref{table:requirements-editors}. The third and fourth user groups are translators and proofreaders respectively (Table \ref{table:requirements-translators} \& Table \ref{table:requirements-proofreaders}), which together perform the major part in the localization process.
+
+\clearpage
 
 \subsection{Quality Requirements} \label{sec:quality-requirements}
 The functional requirements above mostly answered the question \emph{what} specifically users want to do with the tool. The quality requirements instead look at the \emph{how}. The product quality model defined by the ISO/IEC standard 25010 \cite{_iso/iec_2011} names usability as one of eight product characteristics that contribute to the overall quality. Usability is further divided into a set of 6 sub-characteristics: appropriateness recognizability, learnability, operability, user error protection, user interface aesthetics and accessibility. Since the constraints of this project did not allow focusing on all of these aspects, learnability and user error protection were chosen as the most important. Table \ref{table:quality-requirements} shows a list of quality requirements.
