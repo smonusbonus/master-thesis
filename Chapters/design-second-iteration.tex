@@ -76,7 +76,7 @@ Additionally the main branch was renamed from \emph{master} to \emph{published} 
 % The focus group gathered after the first usability study made clear that the technical version control terminology used for the first prototype is only poorly understood. Therefore, new terms were conceived for the features least understood. In general, these were branches and pull requests.
 
 \section{Improved Diff View}
-The diff view posed some problems to users when looking at added translations (Issue \#11). Because the previous state was no translation at all the previous state was empty and therefore the view showed a red empty box. Some users mistook this for a missing translation or an indication of an error, because of the red color (Issue \#13). The new design used a gray box instead to show that there was nothing before (Figure \ref{fig:improved-diff-view}).
+The diff view posed some problems to users when looking at added translations (Issue \#11). Because the previous state was no translation at all the view showed a red empty box. Some users mistook this for a missing translation or an indication of an error, because of the red color (Issue \#13). The new design used a gray box instead to show that there was nothing before (Figure \ref{fig:improved-diff-view}).
 
 Issue \#12 was addressed by underlining the breadcrumb, so that it becomes clearer to users that they can interact with it. Furthermore, instead of the button saying "show item" it was now labeled "edit lesson", which is hopefully clearer as well.
 
@@ -97,6 +97,13 @@ Furthermore, Issue \#16 was fixed by replacing the "back to editor" button with 
  \includegraphics[width=\textwidth]{second-iteration/changes/saving-shortcut}
  \caption{Saving shortcut}
  \label{fig:saving-shortcut}
+\end{figure}
+
+\begin{figure}[hp!]
+ \centering
+ \fbox{\includegraphics[width=\textwidth]{second-iteration/save-changes}}
+ \caption{Save changes}
+ \label{fig:save-changes}
 \end{figure}
 
 \section{New Content Representation}
@@ -140,21 +147,14 @@ For the new interface a different content representation was designed (Figure \r
  \caption{Merge and publish copies}
 \end{figure}
 
-\begin{figure}[hp!]
- \centering
- \fbox{\includegraphics[width=\textwidth]{second-iteration/list-of-requests}}
- \caption{List of requests}
-\end{figure}
+% \begin{figure}[hp!]
+%  \centering
+%  \fbox{\includegraphics[width=\textwidth]{second-iteration/list-of-requests}}
+%  \caption{List of requests}
+% \end{figure}
 
 \begin{figure}[hp!]
  \centering
  \fbox{\includegraphics[width=\textwidth]{second-iteration/request-detail}}
  \caption{Review request}
-\end{figure}
-
-\begin{figure}[hp!]
- \centering
- \fbox{\includegraphics[width=\textwidth]{second-iteration/save-changes}}
- \caption{Save changes}
- \label{fig:save-changes}
 \end{figure}
