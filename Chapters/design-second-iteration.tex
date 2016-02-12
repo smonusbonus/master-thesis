@@ -78,7 +78,7 @@ Additionally the main branch was renamed from \emph{master} to \emph{published} 
 \section{Improved Diff View}
 The diff view posed some problems to users when looking at added translations (Issue \#11). Because the previous state was no translation at all the view showed a red empty box. Some users mistook this for a missing translation or an indication of an error, because of the red color (Issue \#13). The new design used a gray box instead to show that there was nothing before (Figure \ref{fig:improved-diff-view}).
 
-Issue \#12 was addressed by underlining the breadcrumb, so that it becomes clearer to users that they can interact with it. Furthermore, instead of the button saying "show item" it was now labeled "edit lesson", which is hopefully clearer as well.
+Issue \#12, which prevented users from navigating from the diff view to the editing view, was addressed by underlining the breadcrumb, so that it became clearer that one can interact with it. Furthermore, instead of the button saying "show item" it was now labeled "edit lesson", which is hopefully clearer as well.
 
 \begin{figure}[h!]
  \centering
@@ -90,7 +90,7 @@ Issue \#12 was addressed by underlining the breadcrumb, so that it becomes clear
 \section{Saving Process}
 As Figure \ref{fig:saving-shortcut} shows the editor view now offers a shortcut for saving changes. In the design of the first iteration users were forced to use the save changes view (Figure \ref{fig:save-changes}), which also shows the differences between the old and the new state of the content. This is of course useful if a lot of changes have been done, especially across several lessons. But, the last study has shown, that users do not necessarily work that way (Issue \#18) and that it is often more convenient to save small changes right away. Therefore a simple save button at the bottom of the content table was introduced.
 
-Furthermore, Issue \#16 was fixed by replacing the "back to editor" button with a simple \emph{x}, which is often used for closing overlays.
+Furthermore, Issue \#16, which was related to the naming of the "back to editor" button and the fact that users confused its meaning with a "real" content editor, was solved by using a simple \emph{x} instead, which is often used for closing views or popups.
 
 \begin{figure}[h!]
  \centering
