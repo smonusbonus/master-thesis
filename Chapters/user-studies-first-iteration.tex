@@ -137,16 +137,16 @@ Success & 2 & 5 & 3 \\ \hline
 \end{table}
 
 \subsubsection{Time on Task}
-The time on task was measured based on the video recordings of the sessions. The large differences between Scenario 2 and the other scenarios might be due to the different levels of difficulties inherent to the tasks presented in the scenarios. The table below highlights the shortest and longest times that were needed to finish a certain scenario. The times for Scenario 1 have the highest variance, which could point towards potential usability problems which were not encountered by all users. Scenario 1 asked users to “not edit the live data”, which meant that they had to create a new branch. Since none of the participants had prior experience with version control, this was a particularly difficult scenario for some of them.
+The time on task was measured based on the video recordings of the sessions. The large differences between Scenario 2 and the other scenarios might be due to the different levels of difficulties inherent to the tasks presented in the scenarios. The table below highlights the different durations (in seconds) that were needed to finish a certain scenario. The mean for Scenario 1 has the highest \ac{SD}, which could point towards potential usability problems which were not encountered by all users. Scenario 1 asked users to “not edit the live data”, which meant that they had to create a new branch. Since none of the participants had prior experience with version control, this was a particularly difficult scenario for some of them.
 
 \begin{table}[h!]
 \begin{tabular}{|r|r|r|r|r|r|r|r|}
 \hline
 \rowcolor[HTML]{EFEFEF}
-{\bf Scenario} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}{\bf User 1}} & {\bf User 2} & {\bf User 3} & {\bf User 4} & {\bf User 5} & {\bf Mean} & {\bf Var} \\ \hline
-\cellcolor[HTML]{EFEFEF} 1 & 505 & 270 & 313 & 275 & 519 & 376 & 15624 \\ \hline
-\cellcolor[HTML]{EFEFEF} 2 & 81 & 226 & 73 & 170 & 90 & 128 & 4511 \\ \hline
-\cellcolor[HTML]{EFEFEF} 3 & 301 & 375 & 418 & 507 & 399 & 400 & 5550      \\ \hline
+{\bf Scenario} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}{\bf User 1}} & {\bf User 2} & {\bf User 3} & {\bf User 4} & {\bf User 5} & {\bf Mean} & {\bf SD} \\ \hline
+\cellcolor[HTML]{EFEFEF} 1 & 505 & 270 & 313 & 275 & 519 & 376 & 133.1 \\ \hline
+\cellcolor[HTML]{EFEFEF} 2 & 81 & 226 & 73 & 170 & 90 & 128 & 67.2 \\ \hline
+\cellcolor[HTML]{EFEFEF} 3 & 301 & 375 & 418 & 507 & 399 & 400 & 85.2      \\ \hline
 \end{tabular}
 \centering
 \caption{Time needed to perform scenarios (in seconds)}
@@ -162,38 +162,22 @@ An interaction was counted as an error if the user departed from the ideal path 
 \begin{tabular}{|r|r|r|r|r|r|r|r|}
 \hline
 \rowcolor[HTML]{EFEFEF}
-\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}{\bf Task}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf User 1}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf User 2}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf User 3}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf User 4}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf User 5}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf Mean}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf Var}} \\ \hline
-\cellcolor[HTML]{EFEFEF}1                                & 3                                                         & 1                                                         & 3                                                         & 3                                                         & 1                                                         & 2.2                                                     & 0.96                                                   \\ \hline
-\cellcolor[HTML]{EFEFEF}2                                & 0                                                         & 5                                                         & 0                                                         & 3                                                         & 0                                                         & 1.6                                                     & 4.24                                                   \\ \hline
-\cellcolor[HTML]{EFEFEF}3                                & 3                                                         & 6                                                         & 7                                                         & 3                                                         & 2                                                         & 4.2                                                     & 3.76                                                   \\ \hline
+\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{Scenario}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{User 1}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{User 2}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{User 3}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{User 4}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{User 5}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{Mean}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{SD}} \\ \hline
+\cellcolor[HTML]{EFEFEF}1 & 3 & 1 & 3 & 3 & 1 & 2.2 & 1.1 \\ \hline
+\cellcolor[HTML]{EFEFEF}2 & 0 & 5 & 0 & 3 & 0 & 1.6 & 2.3 \\ \hline
+\cellcolor[HTML]{EFEFEF}3 & 3 & 6 & 7 & 3 & 2 & 4.2 & 2.2 \\ \hline
 \end{tabular}
 \centering
-\caption{Number of errors done by each participant}
+\caption{Number of errors by each participant}
 \label{table:error-rate}
 \end{table}
-
-%\subsubsection{Summary of Quantitative Data}
-
-%\begin{table}[h!]
-%\begin{tabular}{|r|r|r|r|r|}
-%\hline
-%\rowcolor[HTML]{EFEFEF}
-%\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}{\bf Task}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf Completed}} & \multicolumn{1}{p{2cm}|}{\cellcolor[HTML]{EFEFEF}{\bf Task completion rate}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\bf Errors (mean)}} & \multicolumn{1}{p{2cm}|}{\cellcolor[HTML]{EFEFEF}{\bf Time (sec) (mean)}} \\ \hline
-%\cellcolor[HTML]{EFEFEF}1                                & 2                                                            & 40\%                                                                    & 2.2                                                              & 376.4                                                                        \\ \hline
-%\cellcolor[HTML]{EFEFEF}2                                & 5                                                            & 100\%                                                                   & 1.6                                                              & 128                                                                          \\ \hline
-%\cellcolor[HTML]{EFEFEF}3                                & 3                                                            & 60\%                                                                    & 4.2                                                              & 400                                                                          \\ \hline
-%\end{tabular}
-%\centering
-%\caption{ Summary of quantitative data collected}
-%\label{table:quant-data-summary}
-%\end{table}
 
 \subsection{Discovered Usability Issues} \label{sec:usability-issues-1st-study}
 The following section describes the usability issues that have been discovered by observing participants performing the different scenarios. In total, 26 different problems were identified. 7 of them were so severe they prevented participants from finishing their tasks. 8 issues caused a significant delay or frustration for users. The remaining issues only caused minor problems or were suggestions for improvement.
 
 In order to rank the issues by their impact on the user experience a severity score was used, as suggested by Sauro and Lewis \cite{sauro_quantifying_2012}. The most severe issues, which prevented users from completing the tasks, were given a score of 10. 5 points were assigned if the issue caused a significant delay or frustration. 3 points were allocated for minor issues and just 1 point for improvements suggested by participants. To create an impact score the severity was multiplied by the frequency of users who experienced the problem (severity * frequency / 10). A frequency of 40\% means that 4 of 10 users encountered the problem, independent of whether they ran into the issue more than once. The scale ranges from 100 (most severe problem, experienced by all users) to 1 (suggestion by a single user).
 
-The issues below are grouped by feature areas and ranked by their impact on the user experience. The most impactful issues are shortly explained.
+The issues below are grouped by feature areas and ranked by their impact on the user experience. Issues with a high impact are shortly explained.
 
 %Link to complete list of problems in appendix?
 
