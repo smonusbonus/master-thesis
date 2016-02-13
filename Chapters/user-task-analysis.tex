@@ -1,5 +1,5 @@
 \chapter{User \& Task Analysis} \label{chapter:user-research}
-Now that the concept of version control and the state of research should be a little clearer, the focus will shift from the abstract and theoretical to more practical matters. This chapter will introduce the reader to the different user groups involved in creating new language lessons for the Babbel learning platform. In addition to outlining the diverse responsibilities of employees, user requirements as well as the most common tasks are analyzed.
+Now that the concept of version control and the state of research should be a little clearer, the focus will shift from the abstract and theoretical to more practical matters. This chapter will introduce the reader to the different user groups involved in creating new language lessons for the Babbel learning platform. In addition to outlining the diverse responsibilities of employees, a detailed task analysis was conducted and is described later on.
 
 Even though the results of this research project should be applicable to a wide range of authoring tools, it is worth noting that, from now on, this thesis will be concerned with the usage of such a system in one particular case: the creation of language lessons by linguistic experts at Babbel. The so called \textit{didactics department} consists of 25 full-time employees and almost 100 freelancers. The department is responsible for creating new language learning content for Babbel's 14 different languages and is divided into teams, based on their language expertise. Right now there are 7 different teams that consist of 2-4 people. Each team is led by a project manager who guides the process of creating new courses and lessons and also manages the collaboration with freelancers.
 
@@ -24,7 +24,13 @@ The role of being a translator or proofreader is not permanent, but only true fo
 Quality assurance is a systematic approach of finding bugs or problems within newly created content. It happens before new content is released. The check is carried out in the frontend as the end-user would use it. The CAT is only used when an error is found and needs to be corrected. A detailed account of what happens during quality assurance is given in section \ref{sec:task-qa}.
 
 \section{Task Analysis} \label{section:task-analysis}
-As described in Chapter \ref{chapter:methods}, a hierarchical task analysis was used to analyze the most common tasks performed within the process of authoring new language learning content. Insights were gained through interviews and observations over the course of several weeks. The task analysis in conjunction with the requirements described later on has served as a foundation for the design of the first prototype.
+In order to build a tool that suits the needs of its users, one first has to identify those needs. To find out how Babbel's employees divide the labor involved in creating language courses, a task analysis was conducted. The aim was to learn how different individuals would use the tool. This helped to design the interface in a way that simplified cooperation between these different groups and furthermore catered to their diverse set of needs.
+
+There are many different ways of analyzing tasks and structuring them in a coherent way. All task analyses are in some way focused on decomposing a task into its constituting parts. The result is often some kind of diagram that visualizes the hierarchy or flow that is inherent to the task. For this project, a method called \ac{HTA} was used \cite{hornsby_hierarchical_2010}. It is a simple but effective method for studying work processes and was developed in the 1960s by two psychologists, Annett and Duncan \cite{shepherd_hierarchial_2000}. Their aim was to understand the purpose of work by looking at human activity within organizations and systems. HTA, in the tradition of systems thinking, regards work as a complex system consisting of  interacting sub-systems, which can be machines and humans \cite{shepherd_hierarchial_2000}. These sub-systems interact by means of input and output. The interplay is constantly adjusted through feedback mechanisms, which allow a human operator, to adapt his or her behavior.
+
+Based on the analysis, diagrams were created, each of which represents a high-level task that is decomposed into sub-tasks. Each diagram provides an overview of the order in which tasks are performed as well as the mental processes behind them.
+
+%As described in Chapter \ref{chapter:methods}, a hierarchical task analysis was used to analyze the most common tasks performed within the process of authoring new language learning content. Insights were gained through interviews and observations over the course of several weeks. The task analysis in conjunction with the requirements described later on has served as a foundation for the design of the first prototype.
 
 %At first employees at Babbel, working on a particular task, were observed. Based on the notes taken during these sessions a first draft of a task diagram was composed. Later on this diagram was discussed with a member of the didactics team during an informal interview. The interviewee was not necessarily the same person that had been observed. With the feedback from the interviews the diagrams were improved again and finalized. The people that participated in these sessions were all full-time Babbel employees, because getting hold of freelancers is much more difficult, since they live in all parts of the world and not necessarily in Berlin, Germany, where Babbel is based. Nevertheless, some valuable feedback could be gathered from Babbel employees that were freelancers themselves before they started working full-time for Babbel.
 
@@ -130,145 +136,3 @@ The analysis made a few things obvious. First of all, collaborating and communic
 %The preparation of localizations (Figure \ref{fig:loc-overview}) is a good example of a step that could almost completely be avoided with a better interface design. Right now everything needs to be prepared and set up initially to make sure that translators only work on the content they are supposed to work on. In future, when a version control system is in place, it is imaginable to skip this process, because work will not be performed on live data anymore and reversibility of changes will be simpler.
 
 In general, version control features could potentially ease collaboration and allow full-time employees to give freelancers more freedom in their work, because the risk of breaking live content will be lower. Furthermore, a feature similar to Github's \textit{pull request} could help to formalize the quality checks that happen throughout the process and provide a platform for communication between freelancers and full-time employees.
-
-The next section introduces a list of formalized requirements that have been derived from the analysis of user groups and their daily tasks.
-
-\section{Requirements}
-As described in Chapter \ref{chapter:methods} the requirements analysis was based on observations and interviews with members of the Didactics Department at Babbel. First, functional requirements are listed, which describe requirements based on a user's goal. In Section \ref{sec:quality-requirements} the quality requirements of the whole system are explained. Please be aware that the following requirements are only concerned with the version control aspects of the content authoring tool. The list of requirements for the whole tool would contain much more.
-
-%The requirements are related to the new content authoring tool and the version control capabilities in particular. They are purely functional and will help to ensure that the final satisfies the various user needs. The requirements were gathered through observations and interviews that were also carried out for the task analysis described earlier.
-
-% the requirements are based on the task analysis
-
-\subsection{Functional Requirements}
-The functional requirements are grouped based on the different user groups. Please note that these user groups are only approximations of the user's responsibilities and in reality are not as clear cut as it might seem here. For example, project managers share many requirements with content authors and the role of translators and proofreaders could be regarded as interchangeable as well.
-
-The requirements are phrased as user stories, which emphasise the user's perspective and the ultimate goal they are trying to achieve by using the software.
-
-%\subsubsection{Requirements of Project Managers}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-\textbf{\#} & \textbf{Requirement} \\ \hline
-PM-1 & As a project manager I want to make sure that translators only work on the content they are supposed to work on so that no unnecessary work is done by them. \\ \hline
-PM-2 & As a project manager I want to have an overview that tells me whether content is broken or something needs attention. \\ \hline
-PM-3 & As a project manager I want to know which recent changes have been made to the language package I am responsible for. \\ \hline
-PM-4 & As a project manager I want to control when new content is published. \\ \hline
-PM-5 & As a project manager I want to know which content is published and which content is currently being worked on. \\ \hline
-PM-6 & As a project manager I want to know when translators or content authors have finished their work so that I can review it. \\ \hline
-\end{tabular}
-\caption{Project manager requirements}
-\label{my-label}
-\end{table}
-% so that is often missing from these requirements
-
-%\subsubsection{Requirements of Content Authors}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-\textbf{\#} & \textbf{Requirement} \\ \hline
-CA-1 & As a content author I want to be able to edit content at any given moment so that I can be most efficient during my working hours. \\ \hline
-CA-2 & As a content author I want to be sure that I cannot break content while editing so that I can focus on what to edit and not how to edit. \\ \hline
-CA-3 & As a content author I want to collaborate with my colleagues on new content that I create. \\ \hline
-CA-4 & As a content author I want an overview of what I have changed during a session so that I can make sure that all the changes were intentional. \\ \hline
-CA-5 & As a content author I want to signal my project manager that I am done with my work so that the PM can review it. \\ \hline
-CA-6 & As a content author I want to edit content without fear of accidentally changing the live content so that I can experiment with some changes. \\ \hline
-\end{tabular}
-\caption{Requirements of Content Authors}
-\label{req-content-authors}
-\end{table}
-
-
-%\subsubsection{Requirements of Translators}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-\textbf{\#} & \textbf{Requirement} \\ \hline
-TL-1 & As a translator I want certainty that I am only translating content that is ready for translation so that I do not translate content that is not ready yet. \\ \hline
-TL-2 & As a translator I want to exactly know what I am supposed to translate. \\ \hline
-TL-3 & As a translator I want to inform the proofreader when my translations are ready for proofreading. \\ \hline
-TL-4 & As a translator I want to get an overview of what changes a proofreader has made to my content. \\ \hline
-TL-5 & As a translator I only want to see the information that is important for my job so that I am not distracted and can do my job efficiently. \\ \hline
-TL-6 & As a translator I want to be guided through the complex parts of the interface or given a tutorial so that I can focus on my job instead of learning a complex interface. \\ \hline
-\end{tabular}
-\caption{Requirements of translators}
-\label{table:req-translators}
-\end{table}
-
-%\subsubsection{Requirements of Proofreaders}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-\textbf{\#} & \textbf{Requirement} \\ \hline
-PR-1 & As a proofreader I want to know exactly what I am supposed to proofread. \\ \hline
-PR-2 & As a proofreader I want to be able to provide feedback to the translator or comment on particular translations. \\ \hline
-PR-3 & As a proofreader I want to inform the translator when I have finished my work so that he or she can review what I did as soon as possible. \\ \hline
-PR-4 & As a proofreader I want an interface with a minimal set of features so that I can focus on the process of proofreading. \\ \hline
-PR-5 & As a proofreader I want to check how the content will look like to the end-user so that I can also check whether the text length is appropriate. \\ \hline
-PR-6 & As a proofreader I want to be guided through the complex parts of the interface or given a tutorial so that I can focus on my job. \\ \hline
-\end{tabular}
-\caption{Requirements of proofreaders}
-\label{req-proofreaders}
-\end{table}
-
-%\subsubsection{Requirements of QA Professionals}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-\textbf{\#} & \textbf{Requirement} \\ \hline
-QA-1 & As a QA professional I want to compare 2 different content releases so that I can see what has changed and identify possible problems. \\ \hline
-QA-2 & As a QA professional I want to see what has changed within a certain content package so that I know which parts of the content I need to review. \\ \hline
-\end{tabular}
-\caption{Requirements of QA Professionals}
-\label{req-qa-professionals}
-\end{table}
-
-%\section{Conclusion}
-% it is a diverse set of requirements
-% different user groups use tool in completely different ways
-% diff view is important for QA proffessionals
-% a lot of requirements are about communication and collaboration
-
-%The user requirements are broken down into four parts for the four different user groups. Table \ref{table:requirements-pm} shows the requirements for project managers, that are exclusive to them. Project managers are, speaking in programming-terms, a subclass of content editors. They both share the same responsibilities, but project managers have a few additional ones, such as guiding the content creation process and managing freelancers. The requirements of content editors can be seen in table \ref{table:requirements-editors}. The third and fourth user groups are translators and proofreaders respectively (Table \ref{table:requirements-translators} \& Table \ref{table:requirements-proofreaders}), which together perform the major part in the localization process.
-
-\clearpage
-
-\subsection{Quality Requirements} \label{sec:quality-requirements}
-The functional requirements above mostly answered the question \emph{what} specifically users want to do with the tool. The quality requirements instead look at the \emph{how}. The product quality model defined by the ISO/IEC standard 25010 \cite{_iso/iec_2011} names usability as one of eight product characteristics that contribute to the overall quality. Usability is further divided into a set of 6 sub-characteristics:  recognizability, learnability, operability, user error protection, user interface aesthetics and accessibility. Since the constraints of this project did not allow focusing on all of these aspects, learnability (1) and user error protection (2) were chosen as the most important to pursue. The reasons for (2) are that the system allows users to edit, and potentially break, content that is exposed to millions of end-users. Mistakes that will be inevitably made should not be punished hard. Instead it should be easy to revert changes and review mechanisms should, if possible, prevent them in the first place. Learnability (1) is important because the tool is used by a large group of freelancers, who are infrequent users and often not very experienced. Giving every freelancer an elaborate introduction or training on how to use the tool is a waste of resources and time, if it can be designed in a way that makes its usage intuitive. Table \ref{table:quality-requirements} shows a list of quality requirements that translate the aforementioned characteristics into measurable goals.
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-\textbf{\#} & \textbf{Requirement} \\ \hline
-1 & Users shall be able to start using the system without prior training. \\ \hline
-2 & The system shall be pro-active in offering help and advice. \\ \hline
-3 & Users shall be prevented from making errors wherever possible. \\ \hline
-4 & Errors shall not lead to permanent consequences, reverting should be easy. \\ \hline
-\end{tabular}
-\caption{Quality requirements}
-\label{table:quality-requirements}
-\end{table}
-
-% this is strongly connected to the research questions, maybe mention/link them?
-
-
-
-
-% how about adding some quality requirements? usability, learnability etc.
