@@ -148,7 +148,7 @@ The new navigation bar did not attract a lot of attention, which is probably a p
 % \end{figure}
 
 \subsubsection{Saving Process}
-A positive outcome of the newly added saving shortcut was that it was used a lot. The downside on the other hand was that some users got confused by the existence of two different saving features. The shortcut save sped up editing and users did not seem to miss the list of changes they would got with the "advanced" saving feature. What has become apparent is that the old saving feature, which concept-wise, is very much inspired by the staging area of version control systems, might not be the most intuitive solution for content editors. In programming there is often a need of touching many files at once to implement a new feature. In content editing this is seldom the case. Changes are usually logically tied to a single lesson.
+A positive outcome of the newly added saving shortcut was that it was used a lot. The downside on the other hand was that some users got confused by the existence of two different saving features. The shortcut save sped up editing and users did not seem to miss the list of changes they would have gotten with the "advanced" saving feature. What has become apparent is that the old saving feature, which concept-wise, is very much inspired by the staging area of version control systems, might not be the most intuitive solution for content editors. In programming there is often a need of touching many files at once to implement a new feature. In content editing this is seldom the case. Changes are usually logically tied to a single lesson.
 
 \subsubsection{Live Content Warning} \label{sec:live-content-warning}
 Task 1 asked users to apply two small changes inside a lesson. The difficulty was that they were not supposed to edit the live content. That meant that they had to create a copy (branch) of the content first, make the changes, save them and finally merge the copy with the public content again. During the first study participants wasted a lot of time finding the create branch/copy feature after they had been alerted to not edit the live content. As Figure \ref{fig:avg-time-task1} shows this time could be greatly reduced through the new design in the second study. The dark grey bars show the moment in time when users discovered the feature. During the first study users spent almost half of the time with finding this feature whereas during the second study they discovered it a lot earlier. This also had an effect on the average time taken for Task 1 in total and the completion rate. These improvements are probably due to the redesign of the warning message as described in the previous chapter (Figure \ref{fig:live-data-warning}).
@@ -161,7 +161,7 @@ Task 1 asked users to apply two small changes inside a lesson. The difficulty wa
 \end{figure}
 
 \subsubsection{Content Representation}
-In general the new content representation performed quite well. This became apparent in Task 3 when users had to find a missing translation. Whereas, during the previous study, some users had problems locating this missing field within the content representation (because it was initially hidden), this was no longer a problem with the new design. Once users had arrived at the content of a lesson and selected the right language they could locate the missing translation quite quickly. The only noteworthy issues of the new design were malfunctioning popovers (did not close automatically) and labels that looked placeholders and were therefore selected by some users (instead of the actual input field).
+In general the new content representation performed quite well. This became apparent in Task 3 when users had to find a missing translation. Whereas, during the previous study, some users had problems locating this missing field within the content representation (because it was initially hidden), this was no longer a problem with the new design. Once users had arrived at the content of a lesson and selected the right language they could locate the missing translation quite quickly. The only noteworthy issues of the new design were malfunctioning popovers (did not close automatically) and labels that looked like placeholders and were therefore selected by some users (instead of the actual input field).
 
 %figure here of old new content representation (finding translation)
 
@@ -177,7 +177,7 @@ In general the new content representation performed quite well. This became appa
 
 
 \subsection{Discovered Usability Issues} \label{sec:discovered-usability-issues}
-Even though several usability issues were fixed as compared to the first study, there were also a lot of new ones coming up. Some of this might be due to the fact that users could now freely interact with the tool and were not constrained by the prototype design as in the first study. In total, the number of rather severe issues (Severity score of 10 or 5)  was reduced from 15 in the previous study to 11 during the second study. Also the impact of most issues was lower this time, which can be attributed to less users experiencing the problem.
+Even though several usability issues were fixed as compared to the first study, there were also a lot of new ones coming up. Some of this might be due to the fact that users could now freely interact with the tool and were not constrained by the prototype design as in the first study. In total, the number of  severe issues (Severity score of 10 or 5) was reduced from 15 in the previous study to 11 during the second study. Also the impact of most issues was lower this time, which can be attributed to fewer users experiencing the problem.
 
 The following section lists the usability issues discovered during the test sessions. As for the first study, the impact score by Sauro and Lewis \cite{sauro_quantifying_2012} was calculated for each issue and the tables are sorted by the highest impact scores. Please note, in order to avoid confusion later on, the issue numbers are continuous and thus start with 27.
 
@@ -228,12 +228,7 @@ As Table \ref{table:issues-merge} shows merge requests were the root of various 
 \end{table}
 
 \subsubsection{Diff}
-The diff view, which was only subject to a small set of changes as compared to the last iteration, caused the most problems. This is surprising, since these issues have not been discovered during the first study. Maybe this time users were better able to articulate themselves or the root of their frustration was more obvious in a fully functioning system. The main problem with the diff view, which design is heavily inspired by Github, was that it does not provide enough context. The listed changes were only of limited value, if not meaningless, without the context they originated from (lesson or exercise). In programming a single method or class can usually be assessed in isolation, but for language learning it is much more important to know the context of a certain element.
-
-% \begin{displayquote}
-% "I’m totally lost inside this view." \textit{Participant 3}
-% \end{displayquote}
-
+The diff view, which was only subject to a small set of changes as compared to the last iteration, caused the most severe problems (Figure \ref{table:issues-diff-2nd}). This is surprising, since these issues have not been discovered during the first study. Maybe this time users were better able to articulate themselves or the root of their frustration was more obvious in a fully functioning system. The main problem with the diff view, which design is heavily inspired by Github, was the missing context as well as the entirely different structure of the content (as compared to the main editing view). In programming a single method or class can usually be assessed in isolation, but for language learning it is much more important to know the context of a certain element. The listed changes were only of limited value, if not meaningless, when presented in this way. One participant described it as being "totally lost inside this view".
 
 \begin{table}[h!]
 \centering
