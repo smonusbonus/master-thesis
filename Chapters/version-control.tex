@@ -22,8 +22,6 @@ The general concepts and terms described below are mostly shared between differe
  \label{fig:file-state}
 \end{figure}
 
-%should mention somewhere that his graphic was adopted from the Git Pro book http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
-
 \begin{itemize}
   \item Repository: a database that holds file contents and all versions since creation. A new repository can be created by issuing the \textit{init} command inside a directory. This means that from that moment all files in the directory and its sub-directories can be tracked by version control, unless told otherwise (see next bullet). Repositories can be either local (situated on the client machine) or remote (on the server).
   \item Branching: a branch is a named copy of the entire content stored inside the repository. It allows developers to build features without influencing the stable code. Branches can also be utilized to experiment in case one does not know whether a certain direction will lead to the desired solution.
@@ -42,21 +40,21 @@ Figure \ref{fig:git-workflow} provides an overview of a typical Git workflow. Th
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{version-control/git_flow}
- \caption{A common version control workflow, illustration adopted from Github Guides \cite{_understanding_????}.}
+ \caption{A Common Version Control Workflow, Illustration Adopted From Github Guides \cite{_understanding_????}.}
  \label{fig:git-workflow}
 \end{figure}
 
 
 \section{Version Control Software}
-The concept of version control is older than some people might think. Early implementations, such as SCCS (Source Code Control System) or RCS (Revision Control System) date back to the 1970s and 80s \cite{_gnu_????,rochkind_source_1975}. According to Sink \cite{sink_version_2011} version control software evolved in three stages: first generation systems only allowed editing one file at a time that had to be locked while changing it. Second generation systems introduced networking and a central repository for simplifying collaboration. Additionally, the concurrent editing of files was now possible. Apache Subversion, still the second-most popular VCS as of 2015 \cite{_stack_2015}, belongs to this generation. The third generation of version control systems were distributed (instead of centralized), no longer file-based and made branching more convenient. Distributed systems are faster, because the network latency for talking to a central repository is eliminated. Furthermore, third generation systems handle large code-bases more efficiently because these systems do not store copies of each file, but only the changesets. This also makes branching a lot quicker and easier. The most widely used VCS among these third generation systems is Git, which is also described in more detail below.
+The concept of version control is older than some people might think. Early implementations, such as SCCS (Source Code Control System) or RCS (Revision Control System) date back to the 1970s and 80s \cite{rochkind_source_1975}. According to Sink \cite{sink_version_2011} version control software evolved in three stages: first generation systems only allowed editing one file at a time that had to be locked while changing it. Second generation systems introduced networking and a central repository for simplifying collaboration. Additionally, the concurrent editing of files was now possible. Apache Subversion, still the second-most popular VCS as of 2015 \cite{_stack_2015}, belongs to this generation. The third generation of version control systems were distributed (instead of centralized), no longer file-based and made branching more convenient. Distributed systems are faster, because the network latency for talking to a central repository is eliminated. Furthermore, third generation systems handle large code-bases more efficiently because these systems do not store copies of each file, but only the changesets. This also makes branching a lot quicker and easier. The most widely used VCS among these third generation systems is Git, which is also described in more detail below.
 
 \section{Git and Github}
-Git is an open-source version control software that has its origins in the Linux kernel developer community. After running into licensing issues with a proprietary version control software called BitKeeper, the community developed Git in 2005 in order to replace it \cite{chacon_pro_2009, ruparelia_history_2010}. The design of Git was based on BitKeeper and the requirements of the Linux developer community. Because it is distributed and changes do not need to be committed to a central repository it is faster than most other VCSs. Furthermore, it supports hundreds of parallel branches and handles large code bases like the Linux kernel efficiently. Git is also workflow agnostic. There is no access management or locking of files. Everyone can edit anything at any time. Conflicts, in case they emerge, are dealt with after the fact, when files are merged together again. As Linus Torvalds said in a presentation in 2007, Git is based on "a network of trust" \cite{torvalds_linus_2007}. Companies can decide for themselves what kind of rules or workflows they want to enforce. These characteristics have made Git the most popular VCS in software development by far, beating Subversion as a distant second (69\% vs. 37\% adoption) \cite{_stack_2015}.
+Git is an open-source version control software that has its origins in the Linux kernel developer community. After running into licensing issues with a proprietary version control software called BitKeeper, the community developed Git in 2005 in order to replace it \cite{chacon_pro_2009, ruparelia_history_2010}. The design of Git was based on BitKeeper and the requirements of the Linux developer community. Because it is distributed and changes do not need to be committed to a central repository it is faster than most other VCSs. Furthermore, it supports hundreds of parallel branches and handles large code bases like the Linux kernel efficiently. Git is also workflow agnostic. There is no access management or locking of files. Everyone can edit anything at any time. Conflicts, in case they emerge, are dealt with after the fact, when files are merged together again. As Linus Torvalds said in a presentation in 2007, Git is based on "a network of trust"\footnote{https://www.youtube.com/watch?v=4XpnKHJAok8}. Companies can decide for themselves what kind of rules or workflows they want to enforce. These characteristics have made Git the most popular VCS in software development by far, beating Subversion as a distant second (69\% vs. 37\% adoption) \cite{_stack_2015}.
 
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=12cm]{version-control/github-pull-request}}
- \caption{Pull request view on Github \cite{_about_????}.}
+ \caption{Pull Request View on Github}
  \label{fig:github-pr}
 \end{figure}
 
