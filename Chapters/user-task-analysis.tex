@@ -6,14 +6,17 @@ Even though the results of this research project should be applicable to a wide 
 \section{User Groups}
 Below, the different user groups are listed accompanied by a short description of their responsibilities. A more detailed explanation of what these responsibilities entail and which tasks these users perform on a daily basis can be found in Section \ref{section:task-analysis}.
 
-\subsection{Content Authors}
-Content authors conceptualize and create new content. Together with their project managers they decide how a lesson looks like in detail. What is the lesson trying to teach the end-user? What kind of vocabulary is introduced? Which type of exercise is suited best to convey this knowledge? If these decisions are made the editor goes on to "script" a lesson, meaning that a spreadsheet is filled in that defines the exercises, vocabulary items and translations. Please note, that initially there is only one translation (English or German). The job of translating (localizing) a lesson into a new language is usually performed by a separate person since there is rarely a content author who has knowledge of all languages a particular lesson is translated to.
+\subsection{Project Managers} \label{sec:project-managers}
+Project managers guide the content creation process and manage the various professionals involved. They have to set priorities and decide what needs to be worked on. Furthermore, they need to manage freelancers and make sure that they stick to an agreed upon schedule. Project managers are also responsible for the content quality and have the last word before a new course is released.
 
-\subsection{Project Managers}
-As mentioned above, project managers are the ones who guide the content creation process. They have to set priorities and decide what needs to be worked on. Furthermore, they need to manage freelancers and make sure that they stick to an agreed upon schedule. Project managers are also responsible for the content quality and have the last word before a new course is released.
+\subsection{Content Editors}
+Content editors have different responsibilities, ranging from authorship over translation to proofreading. Editors ensure that new content meets a high quality benchmark and fulfills its didactic purpose. Their goal is to create content that allows Babbel's end-users to successfully acquire new language skills. When involved in the localization of existing content, Editors make sure that specific language characteristics, such as idioms, are considered when translating from one language into another.
 
-\subsection{Translators and Proofreaders}
-Translators and proofreaders are responsible for localizing lessons into new languages. They get a clearly defined work package and work in unison. First, the translator translates all vocabulary items, exercise titles and descriptions and then hands over her work to the proofreader. The proofreader corrects spelling errors and notes feedback on issues of style, grammar or semantics.
+\subsection{Authors}
+Authors conceptualize and create new language lessons and courses. Based on guidelines and specifications provided by project managers (Section \ref{sec:project-managers}) they decide how lessons look like in detail. What is the lesson trying to teach the end-user? What kind of vocabulary is introduced? Which type of exercise is suited best to convey this knowledge? If these decisions are made the author goes on to "script" a lesson, meaning that a spreadsheet is filled in that defines the exercises, vocabulary items and translations. Please note, that initially there is only one translation for each lesson, which is usually English or German. The job of translating (localizing) a lesson into a new language is always performed by separate people, who are native speakers of the respective language (see Section \ref{sec:translators-proofreaders}).
+
+\subsection{Translators and Proofreaders} \label{sec:translators-proofreaders}
+Translators and proofreaders are responsible for localizing lessons into new languages. They get a clearly defined work package and work in unison. First, the translator translates all vocabulary items, exercise titles and descriptions and then hands over the work to the proofreader. The proofreader corrects spelling errors and provides feedback on issues of style, grammar or semantics.
 
 The role of being a translator or proofreader is not permanent, but only true for the duration of a project. Someone who is proofreading during one project could be translating during the next. This is why they are regarded as one user group. A more detailed description of tasks performed by translators and proofreaders can be found in Section \ref{sec:task-localization}.
 
@@ -26,9 +29,8 @@ Quality assurance is a systematic approach of finding bugs or problems within ne
 \section{Task Analysis} \label{section:task-analysis}
 In order to build a tool that suits the needs of its users, one first has to identify those needs. To find out how Babbel's employees divide the labor involved in creating language courses, a task analysis was conducted. The aim was to learn how different individuals would use the tool. This helped to design the interface in a way that simplified cooperation between these different groups and furthermore catered to their diverse set of needs.
 
+\subsection{Methodology}
 There are many different ways of analyzing tasks and structuring them in a coherent way. All task analyses are in some way focused on decomposing a task into its constituting parts. The result is often some kind of diagram that visualizes the hierarchy or flow that is inherent to the task. For this project, a method called \ac{HTA} was used \cite{hornsby_hierarchical_2010}. It is a simple but effective method for studying work processes and was developed in the 1960s by two psychologists, Annett and Duncan \cite{shepherd_hierarchial_2000}. Their aim was to understand the purpose of work by looking at human activity within organizations and systems. HTA, in the tradition of systems thinking, regards work as a complex system consisting of  interacting sub-systems, which can be machines and humans \cite{shepherd_hierarchial_2000}. These sub-systems interact by means of input and output. The interplay is constantly adjusted through feedback mechanisms, which allow a human operator, to adapt his or her behavior.
-
-Based on the analysis, diagrams were created, each of which represents a high-level task that is decomposed into sub-tasks. Each diagram provides an overview of the order in which tasks are performed as well as the mental processes behind them.
 
 %As described in Chapter \ref{chapter:methods}, a hierarchical task analysis was used to analyze the most common tasks performed within the process of authoring new language learning content. Insights were gained through interviews and observations over the course of several weeks. The task analysis in conjunction with the requirements described later on has served as a foundation for the design of the first prototype.
 
@@ -41,27 +43,23 @@ Based on the analysis, diagrams were created, each of which represents a high-le
 % is this needed here or can it be included into later sections?
 
 \subsection{Tasks} \label{tasks}
-It is the responsibility of the didactics department to constantly create new learning content. This work can be divided into three major tasks, which can be seen in Table \ref{table:analyzed-tasks}. Three of these four major tasks were analyzed and then visualized using a diagram that shows the hierarchy and dependencies of different sub-tasks. Task 3 was not analyzed, because it is performed with a different tool and is quite separate as a task from the other ones.
+It is the responsibility of the didactics team to constantly create new learning content and optimize existing one. This work can be divided into three major tasks, which are described below. Based on the analysis, diagrams were created, each of which represents a high-level task that is decomposed into sub-tasks. Each diagram provides an overview of the order in which tasks are performed as well as the mental processes behind them.
 
-Note that Task 1 and 3 are carried out by employees at Babbel, whereas Task 2 is mostly performed by freelancers.
-
-%The only exception to this is the voice recording workflow, because it is unclear whether the new tool will accommodate this feature in the future. Therefore voice recording was ignored for now. The three following major areas were analyzed.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\rowcolor[HTML]{EFEFEF}
-{\bf Level} & {\bf Task Description}      \\ \hline
-0. & Conceptualizing and creating new learning content \\ \hline
-1. & Create new lesson           \\
-2. & Localize new lesson         \\
-%3. & Sound recording for new lesson     \\
-3. & Final quality assurance        \\ \hline
-\end{tabular}
-\caption{Tasks that were analyzed}
-\label{table:analyzed-tasks}
-\end{table}
+% \begin{table}[h]
+% \centering
+% \begin{tabular}{|l|l|}
+% \hline
+% \rowcolor[HTML]{EFEFEF}
+% {\bf Level} & {\bf Task Description}      \\ \hline
+% 0. & Conceptualizing and creating new learning content \\ \hline
+% 1. & Create new lesson           \\
+% 2. & Localize new lesson         \\
+% %3. & Sound recording for new lesson     \\
+% 3. & Final quality assurance        \\ \hline
+% \end{tabular}
+% \caption{Tasks that were analyzed}
+% \label{table:analyzed-tasks}
+% \end{table}
 
 \subsubsection{Task 1: Creating a New Lesson} \label{sec:task1}
 Figure \ref{fig:build} shows the workflow for creating a new lesson. It should be noted that before a new lesson is entered into the system, as it is described here by the diagram, a long process of conceptualizing (what should we teach the user and in which way?) and scripting already lies behind. What is referred to as scripting is the process of deciding on the right format of the content. For example what exercise types are best suited to convey a particular kind of knowledge about a language. All these decisions are put into a spreadsheet that is called the manuscript, therefore the term scripting. Creating a new course or lesson, as described by the diagram, is thus only a matter of transferring the manuscript into the content authoring tool. Unfortunately, the script is just an artifact of a poorly designed interface. Because editors prefer to have a good overview of the whole content they prefer spreadsheets over the current tool. The new tool should eliminate the need for this superfluous step and combine scripting and creating a lesson into a single step if possible.
