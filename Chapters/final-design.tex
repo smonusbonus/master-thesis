@@ -15,7 +15,7 @@ Using the same representation as in the editing view makes recognizing the struc
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=\textwidth]{final-design/diff-split}}
- \caption{New difference view}
+ \caption{Newly designed difference view, which provides more context}
  \label{fig:diff-split}
 \end{figure}
 % this figure needs to be changed (nav bar is old)
@@ -23,7 +23,7 @@ Using the same representation as in the editing view makes recognizing the struc
 \section{Saving Process}
 Saving changes was one of the major pitfalls for users during the last usability study. The redesigned saving process addresses the issues \#41 and \#43 listed in Table \ref{table:issues-saving}. Most of all, users were confused by the existence of two separate saving features (Issue \#41). Even though the saving "shortcut" at the bottom of the editing view was used frequently, it caused confusion when users discovered there is also a second saving button at the top. For this reason, the two separate saving features were combined into one by trying to maintain the advantages of both. The new saving process (Figure \ref{fig:highlighted-changes}) allows users to save their changes on the same page as the edits were done while at the same time giving them the opportunity to review what has changed. The changes are highlighted in green and when hovered reveal the state prior to editing it. Users can decide whether they want to enable this highlighting by toggling a checkbox at the bottom of the view.
 
-Additionally to reducing the steps required to save changes, the new feature also provides better feedback (Issue \#43), because the highlighting disappears after the user saved, signalling that there are no current changes that were not saved yet.
+Additionally to reducing the steps required to save changes, the new feature also provides better feedback (Issue \#43), because the highlighting disappears after the user saved, signaling that there are no current changes that were not saved yet.
 
 % using two separate saving features wasn't practical. during the user tests it became clear that a global saving function is not needed. whereas in programming it is often necessary to edit several files in order to implement a certain feature in language authroing the editing context is always defined by the immediate surroundings.
 
@@ -31,23 +31,23 @@ Additionally to reducing the steps required to save changes, the new feature als
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=\textwidth]{final-design/edited-highlighting}}
- \caption{Highlighted changes after editing}
+ \caption{The new editing view combines reviewing and saving changes and reduces the amount of clicks needed to save}
  \label{fig:highlighted-changes}
 \end{figure}
 
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=4cm]{final-design/saving-hover-text}}
- \caption{Hovering a changed text}
+ \caption{Hovering a highlighted changed exposes the previous value}
  \label{fig:hover-changed-text}
 \end{figure}
 
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=4cm]{final-design/saving-hover-image}}
- \caption{Hovering a changed image}
- \label{fig:hover-changed-image}
-\end{figure}
+% \begin{figure}[h!]
+%  \centering
+%  \fbox{\includegraphics[width=4cm]{final-design/saving-hover-image}}
+%  \caption{Hovering a changed image}
+%  \label{fig:hover-changed-image}
+% \end{figure}
 
 
 \section{Error Messages}
@@ -75,7 +75,7 @@ The top-level navigation was changed conceptually, which also had to be reflecte
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=\textwidth]{final-design/new-navigation}}
- \caption{Redesigned navigation bar}
+ \caption{The redesigned navigation bar featuring fewer icons and a consistent way of navigating to the content editor}
  \label{fig:redesigned-nav}
 \end{figure}
 
@@ -85,7 +85,7 @@ In order to make the new diff view work, the lesson editing view had to be revis
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{final-design/new-lesson-header-editing}
- \caption{New lesson header}
+ \caption{New lesson header enabling in-place editing}
  \label{fig:new-lesson-header}
 \end{figure}
 
@@ -98,7 +98,7 @@ The new lesson header design described above required another redesign. Now that
  \label{fig:dl-selection}
 \end{figure}
 
-Besides the conceptual changes and those that addressed usability issues directly, a few visual improvements were made in order to reduce the visual clutter. The form for merging or publishing copies was simplified and the input field for the second reviewer is now hidden by default (Figure \ref{fig:merge-publish}). Furthermore, the list of requests (Figure \ref{fig:review-requests}) and the list of changes (Figure \ref{fig:history-of-changes}) were simplified by removing the "show details" button and instead making the whole row clickable.
+Besides the conceptual changes and those that addressed usability issues directly, a few visual improvements were made in order to reduce the visual clutter. The form for merging or publishing copies was simplified and the input field for the second reviewer is now hidden by default (Figure \ref{fig:merge-publish}). Furthermore, the list of requests (Figure \ref{fig:review-requests}) and the list of changes (Figure \ref{fig:history-of-changes}) were simplified by removing the "show details" button and instead making the whole row clickable. This resulted in less visual clutter and a cleaner interface.
 
 \begin{figure}[h!]
  \centering
