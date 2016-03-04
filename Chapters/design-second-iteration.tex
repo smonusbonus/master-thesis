@@ -55,15 +55,12 @@ During the previous usability study the branch concept presented some serious pr
 
 The warning message in the previous prototype (Figure \ref{fig:live-data-warning}) did not offer any solutions to the users. This lead to a situation where many users were lost after the message appeared. In order to mitigate this problem the new warning message now offers solutions right away. Users can choose to create a new working copy or dismiss the warning and edit the live content anyway.
 
-Additionally the main branch was renamed from \emph{master} to \emph{published} to make it even clearer which kind of content is inside, thus fixing Issue \#3 and \#4.
+Additionally the main branch was renamed from \emph{master} to \emph{published} in order to emphasize its purpose of representing the state visible to the Babbel end-user (Issue \#3). Furthermore, this removed confusions with the concept of the \emph{master language} (Issue \#4).
 
-
-
+% Is this from the research proposal?
 %In most version control systems it is regarded as a best practice to make changes only on feature branches and thus keeping the main branch (master) always in a functional state. The same workflow is desired for content authoring since the public content should always be in an error-free state so that Babbel end-users always get the best possible experience. Not editing the live content directly thus reduces the risk of introducing new errors and allows collaborators to review changes before they are merged. For this reason, a warning message informs users when they are editing the main branch. This warning lead to some confusion during the first usability study. Users noticed they had
 
 %In order to make the version control capabilities of the new content authoring tool as easy to use as possible the system offers a lot of explanations and assists users in making the right decisions. For example there is a warning when users are editing the live content/main branch (Figure \ref{fig:live-data-warning}).
-
-
 
 \begin{figure}[h!]
  \centering
