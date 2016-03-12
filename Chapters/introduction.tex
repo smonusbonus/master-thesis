@@ -6,7 +6,7 @@ The emergence of \ac{MOOCs} has spawned a sharp growth in the e-learning industr
 
 %This research project looks at one of these tools and how to improve it, which is used by the European market leader in online language learning, Babbel \cite{_learning_????}.
 
-The increasing popularity of online learning has also increased the demands on content creators and their tools. The systems that have been quietly powering most e-learning platforms are mostly invisible to its end-users. They are often referred to as \textit{learning management systems} or \textit{authoring systems} or \textit{tools} and have vastly simplified the creation, management and distribution of educational material. Some systems even track the learning progress and gather detailed usage statistics thereby allowing educators to optimize the learning content iteratively. But, with the complexity of learning content and number of contributors increasing quickly, these systems also run into limits. Most of these systems were not built to be used by a large number of contributors at the same time. Furthermore, most lack the ability of keeping track of changes made to learning content or to quickly revert changes. These problems together with a growing user base and increasing expectations on e-learning platforms necessitate the development of a new kind of authoring system more sophisticated than its predecessors.
+The increasing popularity of online learning has also increased the demands on content creators and their tools. The systems that have been quietly powering most e-learning platforms are mostly invisible to its end-users. They are often referred to as \textit{learning management systems} or \textit{authoring systems} or \textit{tools} and have vastly simplified the creation, management and distribution of educational material. Some systems even track the learning progress and gather detailed usage statistics, thereby allowing educators to optimize the learning content continuously. But, with the increasing complexity of learning content and the rising numbers of contributors, these systems also quickly run into limits. Most of these systems were not built to be used by a large number of contributors at the same time. Furthermore, most lack the ability of keeping track of changes made to learning content or to quickly revert changes. These problems together with a growing user base and increasing expectations on e-learning services necessitate the development of a new kind of authoring system more sophisticated than its predecessors.
 
 This thesis investigates how language learning content could be created and managed more easily by applying a proven paradigm from the realm of software development, called version control, to a \ac{CAT} used at one of the European market leaders in the space of online language learning, called Babbel. Special emphasis is put on fostering collaboration between different professionals and keeping track of an ever-changing and expanding course structure. The goal is to exploit version control's benefits and make them work for a non-technical user group.
 
@@ -32,20 +32,22 @@ With the accelerating adoption of e-learning and rising demands in regards to th
 The problems described above have one commonality: they are not exclusive to content authoring, but frequently occur during large software development projects as well. Most developers mitigate these problems by using a \ac{VCS}. Initially, version control adds a small overhead to the software development workflow, but this usually pays off when projects become more complex \cite{spinellis_version_2005}.
 
 Despite its obvious benefits, version control has not been widely adopted outside of the programming realm. This could be partially due to its usability issues \cite{church_case_2014,perez_de_rosso_whats_2013}.
-In the context of this thesis it was investigated if and how authoring tools could benefit from incorporating version control and how such a system could be made more user-friendly. The research question, as already defined in the research proposal \cite{kreiser_master_2015}, reads as follows:
+In the context of this thesis it was investigated if and how authoring tools could benefit from incorporating version control and how such a system could be made more user-friendly. The research question, as defined in the previous research proposal \cite{kreiser_master_2015}, reads as follows:
 
 \begin{center}
 % original research question from the proposal
 %\textit{What is the best way of exposing version control features to a non-technical user-group in the context of a content authoring tool?}
-% Can version control be integrated into authoring tools
- \textit{How can version control improve the authoring process for e-learning content?}
+% The topic for this study will be…”
+%“This study needs to be conducted because…”
+\textit{How can version control simplify the authoring process of e-learning content?}
+%\textit{How can version control improve the authoring process for e-learning content?}
 \end{center}
 
 \noindent %The next paragraph is not indented
 The research question can be further divided into several sub-questions:
 
 \begin{enumerate}
-  \item Which features can be simplified or omitted while  preserving the usefulness of version control?
+  \item Which features can be simplified or omitted while preserving the usefulness of version control?
   %\item How can the interaction design address the diverse needs of different users?
   %\item How can a compromise be found between efficiency and learnability?
   %\item How can the weak learnability of VCSs be improved in order to make the interaction more pleasing for inexperienced users?
@@ -54,14 +56,11 @@ The research question can be further divided into several sub-questions:
 \end{enumerate}
 
 \section{Methodology}
-In order to answer the research question stated above a rather practical approach was adopted. The interface for a new content authoring tool was conceived and turned into prototypes, which were then tested with real users. Emphasis was laid on the version control features as well as the usability of the overall system. In general, the research project consisted of two major phases: the analysis phase and the design and prototyping phase.
+In order to answer the research question stated above a rather practical approach was adopted, which involved designing and testing an interface for a new content authoring tool. In general, the research project consisted of two major phases: the analysis phase and the design and prototyping phase. During the analysis phase a literature review was conducted as well as two additional analyses performed. The literature review examined research concerned with the usability of popular version control software as well as examples where version control was applied outside of the programming realm. The subsequent analyses were mainly centered around the future users of the system. Different analyses were performed, which ensured that user needs and goals were properly addressed during the subsequent design phase.
 
-During the analysis phase a literature review was conducted as well as two additional analyses performed. The literature review examined research concerned with the usability of popular version control software as well as examples where version control was applied outside of the programming realm. The subsequent analyses were mainly centered around the future users of the system and their goals. Therefore, a task analysis and a user requirements analysis were performed. These ensured that user needs and goals were properly addressed during the subsequent design phase.
+Based on the insights gained during the first phase a prototype was designed that incorporated the most important version control features. The prototype was semi-interactive and tested with 5 users during a task-based usability study. This initial study was followed by a focus group meeting during which users discussed the problems they encountered. The focus group put special emphasis on the version control terminology since finding alternatives to the technical and abstract terms used in most version control systems was a key factor for improving the usability of the interface.
 
-Based on the insights gained during the first phase a prototype was designed that incorporated the most important version control features needed for content authoring. The prototype was semi-interactive and tested with 5 users during a task-based usability study. This first study was followed by a focus group meeting during which users discussed the problems they encountered. The focus group put special emphasis on the version control terminology since finding alternatives to the technical and abstract terms used in most version control systems was a key factor for improving the usability of the interface.
-
-The results of the focus group and the first usability study were then used to design an improved version of the interface, which was tested again during a final usability study. The findings informed the final design of the authoring tool and additionally helped to answer the research question described above.
-
+The results of the focus group and the first usability study were then used to design an improved version of the interface, which was tested again during a second usability study. The findings informed the final design of the authoring tool and additionally helped to answer the research question described above.
 
 \section{Thesis Structure}
 The next chapter (Chapter \ref{chapter:version-control}) will introduce the reader to version control software in more detail. Afterwards, Chapter \ref{chapter:related-work}, introduces the reader to relevant research in adjacent fields. This is followed by a more in-depth description of the user groups and the tasks that constitute the content authoring process in Chapter \ref{chapter:user-research}.
