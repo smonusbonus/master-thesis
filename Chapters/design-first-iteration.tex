@@ -6,7 +6,14 @@ The analysis presented in the previous chapter has shown that the content author
 This chapter describes an early prototype, which exposed several version control features, which were deemed potentially useful for the content authoring process. Since the research presented throughout this thesis was mainly concerned with the applicability of version control to the content creation process, the prototype is an important first step towards answering this research question.
 
 % OVERVIEW
-The chapter starts by highlighting the main differences between the integrated version control features and those of a more traditional VCS. Afterwards, the most important views comprising the prototype are shown and shortly explained.
+The chapter starts by highlighting the main differences between the integrated version control features and those of a more traditional VCS. Afterwards, the most important views comprising the prototype are shown and shortly explained. Figure \ref{fig:main-views-diagram} might help to visualize the relations between them: The main editing view as well as the diff comparison are very central, whereas the remaining features are more or less equally important. Please note that the diff is not an independent view of itself but is embedded in several other views, such as the history, the saving page and the merge request details.
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=10cm]{second-iteration/main-views-diagram}
+ \caption{Overview of main sections of the application}
+ \label{fig:main-views-diagram}
+\end{figure}
 
 \section{Comparison to Traditional VCSs} \label{sec:git-feature-comparison}
 As compared to most other version control systems the interface only offers a minimal set of features. Some of them have been vastly simplified or adapted to the domain of language content authoring. A few features, such as the pull request and the history, are very close to their "originals".
