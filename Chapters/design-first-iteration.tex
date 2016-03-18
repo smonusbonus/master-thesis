@@ -1,8 +1,15 @@
 \chapter{First Design Iteration} \label{chapter:design-first-iteration}
-Based on the insights gained through task and requirements analysis as well as the literature study, a first semi-interactive prototype was designed. The design consisted of the most important views needed for covering the version control workflow. Additionally, a simple editing view was integrated, so that the tasks for the user study could be embedded inside a realistic scenario. The overall interface was strongly influenced by existing code hosting platforms, such as Github\footnote{https://github.com/about}, Gitlab\footnote{https://about.gitlab.com/} and Bitbucket\footnote{https://bitbucket.org/} as well as several Git GUIs\footnote{http://git-scm.com/downloads/guis}. The system can therefore be regarded as a crossbreed between version control and content authoring tool. How the system compares to a traditional version control system is described in more detail below.
+% LINK
+The analysis presented in the previous chapter has shown that the content authoring process at Babbel is a highly collaborative process involving a lot of tasks. In order to simplify the collaboration and potentially speed up the content creation, the integration of version control features has been suggested earlier.
+
+% FOCUS / AIM - Why is this important?
+This chapter describes an early prototype, which exposed several version control features, which were deemed potentially useful for the content authoring process. Since the research presented throughout this thesis was mainly concerned with the applicability of version control to the content creation process, the prototype is an important first step towards answering this research question.
+
+% OVERVIEW
+The chapter starts by highlighting the main differences between the integrated version control features and those of a more traditional VCS. Afterwards, the most important views comprising the prototype are shown and shortly explained.
 
 \section{Comparison to Traditional VCSs} \label{sec:git-feature-comparison}
-As compared to most other version control systems the interface only offers a minimal set of features. Some of them have been vastly simplified or adapted to the domain of language lesson authoring. A few features, such as the pull request and the history, are very close to their originals.
+As compared to most other version control systems the interface only offers a minimal set of features. Some of them have been vastly simplified or adapted to the domain of language content authoring. A few features, such as the pull request and the history, are very close to their "originals".
 
 \begin{itemize}
   \item There is no differentiation between \emph{local and remote repositories} anymore. Church et al.'s \cite{church_case_2014} work has shown that hidden dependencies between these two often complicate matters for the user. Therefore, it was decided to have only one repository that is constantly up to date. This should, in theory, also simplify collaboration and avoid conflicts.
@@ -17,7 +24,9 @@ As compared to most other version control systems the interface only offers a mi
 
 As the reader might have noticed, the prototype still uses the original version control terminology (except for committing which is now called saving). This was done in order to learn which terms would cause most problems and to discuss this topic separately within a focus group following the first user study.
 
-\section{Main Views}
+\section{Prototype}
+The overall interface was strongly influenced by existing code hosting platforms, such as Github\footnote{https://github.com/about}, Gitlab\footnote{https://about.gitlab.com/} and Bitbucket\footnote{https://bitbucket.org/} as well as several Git GUIs\footnote{http://git-scm.com/downloads/guis}. The system can be regarded as a crossbreed between version control and content authoring tool.
+
 Below, the most important screens of the prototype are shown. The version control features are always accessible at the top in a horizontal navigation bar. The content in the editing view (Figure \ref{fig:prot-initial-editor-view}) can be navigated by expanding a tree structure that also reflects the inherent composition of the content.
 
 A typical user flow would consist of creating a new branch (Figure \ref{fig:create-branch}), editing some content (Figure \ref{fig:prot-initial-editor-view}), saving it (Figure \ref{fig:unsaved-changes}), optionally checking the edits in the history (Figure \ref{fig:history}) and finally creating a pull request (Figure \ref{fig:open-new-pr} and Figure \ref{fig:list-of-prs}).
